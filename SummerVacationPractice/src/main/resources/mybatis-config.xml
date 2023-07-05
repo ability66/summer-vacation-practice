@@ -9,9 +9,9 @@
             <dataSource type="POOLED">
                 <!--数据库连接信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/2023summer?usaSSL=false"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test1?usaSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="1234"/>
+                <property name="password" value="200212"/>
             </dataSource>
         </environment>
     </environments>

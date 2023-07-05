@@ -2,6 +2,8 @@ package com.system.summervacationpractice;
 
 
 import com.system.summervacationpractice.entity.Student;
+import com.system.summervacationpractice.entity.User;
+import com.system.summervacationpractice.mapper.UserMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -26,10 +28,13 @@ public class MyBatisDemo {
         //2. 获取SqlSession对象，用它来执行sql
         SqlSession sqlSession = sqlSessionFactory.openSession();
         //3. 执行sql
-        List<Class> users = sqlSession.selectList("Class.selectAll");
+        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+        List<User>users=userMapper.selectAll();
         System.out.println(users);
         //4. 释放资源
         sqlSession.close();
+        //sasasadadadadddaddsa
+        ///dasdsadsafasfsafasf
 
     }
 }
