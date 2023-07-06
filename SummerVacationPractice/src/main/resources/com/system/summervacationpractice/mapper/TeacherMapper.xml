@@ -9,7 +9,12 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.TeacherMapper">
-    <select id="selectAll" resultType="com.system.summervacationpractice.entity.Teacher">
-        select * from teacher
+    <!--插入教师信息-->
+    <insert id="insertTeachers">
+
+    </insert>
+    <!--根据教师号查信息-->
+    <select id="selectByTea_no" resultType="teacher">
+
     </select>
 </mapper>

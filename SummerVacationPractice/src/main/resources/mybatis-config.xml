@@ -3,6 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <typeAliases>
+        <package name="com.system.summervacationpractice.entity"/>
+    </typeAliases>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -16,16 +21,7 @@
         </environment>
     </environments>
     <mappers>
-        <!--加载sql映射文件-->
-        <mapper resource="com/system/summervacationpractice/mapper/ClassMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/ClassTableMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/CollegeMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/GradeMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/ReportMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/StudentMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/SubjectMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/TeacherMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/TerminologyMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/UserMapper.xml"/>
+        <!--加载包sql映射文件-->
+        <package name="com.system.summervacationpractice.mapper"/>
     </mappers>
 </configuration>

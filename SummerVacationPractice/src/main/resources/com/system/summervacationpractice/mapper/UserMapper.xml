@@ -9,7 +9,15 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.UserMapper">
-    <select id="selectAll" resultType="com.system.summervacationpractice.entity.User">
+    <!--设置用户-->
+    <insert id="insertUser">
+
+    </insert>
+    <select id="selectAll" resultType="user">
         select * from user
+    </select>
+    <!--根据用户名查询-->
+    <select id="selectByUsername" resultType="user">
+
     </select>
 </mapper>
