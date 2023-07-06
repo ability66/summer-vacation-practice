@@ -9,15 +9,17 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.UserMapper">
-    <!--设置用户-->
-    <insert id="insertUser">
-
+    <!--设置用户（添加返回数据的主键）-->
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="true">
+        insert into user values (#{user_id},#{username},#{password},
+        #{power},#{tea_no},#{stu_no})
     </insert>
+<!--    查找所有用户-->
     <select id="selectAll" resultType="user">
         select * from user
     </select>
     <!--根据用户名查询-->
     <select id="selectByUsername" resultType="user">
-
+        select * from user where username = #{username}
     </select>
 </mapper>

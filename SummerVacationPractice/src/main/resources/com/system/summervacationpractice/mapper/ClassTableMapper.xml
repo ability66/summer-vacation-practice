@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
 
@@ -11,14 +11,14 @@
 <mapper namespace="com.system.summervacationpractice.mapper.ClassTableMapper">
     <!--根据班级号设置课表-->
     <insert id="insertClassTableByClass_no">
-
+        insert into classtable values (#{class_no},#{class_order},#{class_weekday},#{stu_no},#{tea_no})
     </insert>
     <!--根据班级号选择课表-->
     <select id="selectClassTableByStu_no" resultType="classtable">
-
+        select * from classtable where class_no=#{class_no}
     </select>
     <!--根据课程号查班级号-->
     <select id="selectClass_noBySub_no" resultType="java.lang.Integer">
-
+        select class_no from classtable where sub_no=#{sub_no}
     </select>
 </mapper>

@@ -12,5 +12,6 @@
     <!---学号查询班级号-->
     <select id="selectClassByStu_no" resultType="class">
 
+            select * from class where tea_no=(select tea_no from student where stu_no=#{stu_no})
     </select>
 </mapper>

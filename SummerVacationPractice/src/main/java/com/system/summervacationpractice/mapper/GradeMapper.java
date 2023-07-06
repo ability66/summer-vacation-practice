@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface GradeMapper {
-    List<Subject> selectByStu_no(int stu_no);
-    List<Subject> selectByStu_noClass_no(int stu_no,int class_no);
-    void insertGrades(@Param("gardes") Grade[] grades);
+    List<Grade> selectByStu_no(int stu_no);
+    Grade selectByStu_noClass_no(int stu_no,int sub_no);
+    void insertGrades(Grade[] grades);
 }

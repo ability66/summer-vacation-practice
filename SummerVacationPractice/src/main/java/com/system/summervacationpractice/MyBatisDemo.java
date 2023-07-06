@@ -1,10 +1,12 @@
 package com.system.summervacationpractice;
 
 
-import com.system.summervacationpractice.entity.Student;
-import com.system.summervacationpractice.entity.User;
-import com.system.summervacationpractice.mapper.StudentMapper;
-import com.system.summervacationpractice.mapper.UserMapper;
+import com.system.summervacationpractice.entity.*;
+import com.system.summervacationpractice.entity.Class;
+import com.system.summervacationpractice.mapper.ClassMapper;
+
+import com.system.summervacationpractice.mapper.ClassTableMapper;
+import com.system.summervacationpractice.mapper.GradeMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -13,6 +15,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
 
 /**
  * Mybatis 快速入门代码
@@ -27,11 +30,10 @@ public class MyBatisDemo {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
         //2. 获取SqlSession对象，用它来执行sql
-        SqlSession sqlSession = sqlSessionFactory.openSession();
+        //true开启自动提交事务
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
         //3. 执行sql
-        StudentMapper studentMapper = sqlSession.getMapper(StudentMapper.class);
-        Student student = studentMapper.selectByStu_no(1);
-        System.out.println(student);
+
         //4. 释放资源
         sqlSession.close();
 //efheiuyfeyfjehkjfe

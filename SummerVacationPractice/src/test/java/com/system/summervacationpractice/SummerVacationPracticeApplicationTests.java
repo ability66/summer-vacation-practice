@@ -18,4 +18,5 @@ class SummerVacationPracticeApplicationTests {
     @Test
     void contextLoads() throws IOException {}
 
+
 }

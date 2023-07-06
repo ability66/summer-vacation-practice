@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
 
@@ -11,7 +11,8 @@
 <mapper namespace="com.system.summervacationpractice.mapper.ReportMapper">
     <!--插入报告-->
     <insert id="insertReport">
-
+        insert into report(stu_no, tea_no, re_location, upload_date)
+        values(#{stu_no},#{tea_no},#{re_location},#{upload_date})
     </insert>
     <!--根据学号数组查询-->
     <select id="selectByStu_nos" resultType="report">
