@@ -9,7 +9,8 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.ClassMapper">
-    <select id="selectAll" resultType="class">
-        select * from class
+    <!---学号查询班级号-->
+    <select id="selectClassByStu_no" resultType="class">
+
     </select>
 </mapper>

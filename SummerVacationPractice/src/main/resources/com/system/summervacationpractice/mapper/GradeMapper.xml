@@ -9,7 +9,16 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.GradeMapper">
-    <select id="selectAll" resultType="grade">
-        select * from grade
+    <!--设置各科成绩-->
+    <insert id="insertGrades">
+
+    </insert>
+    <!--根据学号查询各科成绩-->
+    <select id="selectByStu_no" resultType="grade">
+
+    </select>
+    <!--根据学号，课程号查询成绩-->
+    <select id="selectByStu_noClass_no" resultType="grade">
+
     </select>
 </mapper>

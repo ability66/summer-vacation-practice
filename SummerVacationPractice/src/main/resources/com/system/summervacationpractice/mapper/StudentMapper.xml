@@ -9,7 +9,20 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.StudentMapper">
-    <select id="selectAll" resultType="student">
-        select * from student
+    <!--设置学生信息-->
+    <insert id="insertStudent">
+
+    </insert>
+    <!--设置学生班级-->
+    <insert id="insertStudentClass">
+
+    </insert>
+    <!--根据学号查询信息-->
+    <select id="selectByStu_no" resultType="student">
+        select * from student where stu_no=#{stu_no}
+    </select>
+    <!--根据班级号查所有学号-->
+    <select id="selectStu_noByClass_no" resultType="java.lang.Integer">
+
     </select>
 </mapper>

@@ -9,7 +9,12 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.SubjectMapper">
-    <select id="selectAll" resultType="subject">
-        select * from subject
+    <!--设置课程信息-->
+    <insert id="insertSubject">
+
+    </insert>
+    <!--根据工号查课程号-->
+    <select id="selectSub_noByTea_no" resultType="java.lang.Integer">
+
     </select>
 </mapper>

@@ -5,5 +5,6 @@ import com.system.summervacationpractice.entity.User;
 import java.util.List;
 
 public interface UserMapper {
-    List<User> selectAll();
+    void insertUser(User user);
+    User selectByUsername(String username);
 }

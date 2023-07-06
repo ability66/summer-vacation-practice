@@ -9,7 +9,12 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.ReportMapper">
-    <select id="selectAll" resultType="report">
-        select * from report
+    <!--插入报告-->
+    <insert id="insertReport">
+
+    </insert>
+    <!--根据学号数组查询-->
+    <select id="selectByStu_nos" resultType="report">
+
     </select>
 </mapper>
