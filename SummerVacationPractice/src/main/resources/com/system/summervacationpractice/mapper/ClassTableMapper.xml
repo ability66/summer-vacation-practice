@@ -9,7 +9,7 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.ClassTableMapper">
-    <select id="selectAll" resultType="com.system.summervacationpractice.entity.ClassTable">
+    <select id="selectAll" resultType="classtable">
         select * from classtable
     </select>
 </mapper>

@@ -3,29 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <typeAliases>
+        <package name="com.system.summervacationpractice.entity"/>
+    </typeAliases>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <!--数据库连接信息-->
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/test1?usaSSL=false"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/2023summer?usaSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="200212"/>
+                <property name="password" value="1234"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
-        <!--加载sql映射文件-->
-        <mapper resource="com/system/summervacationpractice/mapper/ClassMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/ClassTableMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/CollegeMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/GradeMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/ReportMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/StudentMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/SubjectMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/TeacherMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/TerminologyMapper.xml"/>
-        <mapper resource="com/system/summervacationpractice/mapper/UserMapper.xml"/>
+        <!--加载包sql映射文件-->
+        <package name="com.system.summervacationpractice.mapper"/>
     </mappers>
 </configuration>

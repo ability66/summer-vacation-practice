@@ -9,7 +9,7 @@
     namespace:名称空间
 -->
 <mapper namespace="com.system.summervacationpractice.mapper.ClassMapper">
-    <select id="selectAll" resultType="com.system.summervacationpractice.entity.Class">
+    <select id="selectAll" resultType="class">
         select * from class
     </select>
 </mapper>

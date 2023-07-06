@@ -33,7 +33,6 @@ public class MyBatisDemo {
         System.out.println(users);
         //4. 释放资源
         sqlSession.close();
-       //090909
 
     }
 }
