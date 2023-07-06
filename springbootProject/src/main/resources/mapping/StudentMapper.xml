@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.example.summer.mapper.StudentMapper">
+    <!--设置学生信息-->
+    <insert id="insertStudent">
+
+    </insert>
+    <!--设置学生班级-->
+    <insert id="insertStudentClass">
+
+    </insert>
+    <!--根据学号查询信息-->
+    <select id="selectByStu_no" resultType="student">
+        select * from student where stu_no=#{stu_no}
+    </select>
+    <!--根据班级号查所有学号-->
+    <select id="selectStu_noByClass_no" resultType="java.lang.Integer">
+
+    </select>
+</mapper>
