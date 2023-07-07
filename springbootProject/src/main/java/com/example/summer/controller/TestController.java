@@ -13,8 +13,8 @@ public class TestController {
     private UserService userService;
 
     @RequestMapping("/list")
-    public String list(){
-       return userService.list().toString();
+    public String list() {
+        return userService.list().toString();
     }
 
 }

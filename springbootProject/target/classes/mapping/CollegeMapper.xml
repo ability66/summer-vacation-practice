@@ -4,12 +4,12 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
 <mapper namespace="com.example.summer.mapper.CollegeMapper">
     <select id="selectAll" resultType="college">
-        select * from college
+        select *
+        from college
     </select>
 </mapper>

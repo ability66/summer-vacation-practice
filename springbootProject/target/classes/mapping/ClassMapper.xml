@@ -4,13 +4,14 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
 <mapper namespace="com.example.summer.mapper.ClassMapper">
     <!---学号查询班级号-->
     <select id="selectClassByStu_no" resultType="class">
-        select * from class where tea_no=(select tea_no from student where stu_no=#{stu_no})
+        select *
+        from class
+        where class_no = (select class_no from classtostudent where stu_no = #{stu_no})
     </select>
 </mapper>

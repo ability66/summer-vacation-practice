@@ -10,7 +10,7 @@ public class ClassService {
     @Autowired
     private ClassMapper classMapper;
 
-    public Class selectClassByStu_no(int stu_no){
+    public Class selectClassByStu_no(int stu_no) {
         return classMapper.selectClassByStu_no(stu_no);
     }
 }

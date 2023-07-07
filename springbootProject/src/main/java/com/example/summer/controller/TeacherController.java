@@ -1,10 +1,15 @@
 package com.example.summer.controller;
 
-import com.example.summer.entity.*;
+import com.example.summer.entity.Grade;
+import com.example.summer.entity.Student;
+import com.example.summer.entity.Teacher;
 import com.example.summer.service.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -21,9 +26,9 @@ public class TeacherController {
     TeacherService teacherService;
     SubjectService subjectService;
 
-    @RequestMapping(value = "/getMessage",method = RequestMethod.GET)
+    @RequestMapping(value = "/getMessage", method = RequestMethod.GET)
     public Teacher getMessage(int tea_no) {
-        return teacherService.getMessage(tea_no);
+        return teacherService.selectByTea_no(tea_no);
     }
 
 //    @RequestMapping(value = "/queryReport",method = RequestMethod.GET)
@@ -35,18 +40,18 @@ public class TeacherController {
 //        }
 //    }
 
-    @RequestMapping(value = "/getStudent",method = RequestMethod.GET)
+    @RequestMapping(value = "/getStudent", method = RequestMethod.GET)
     public List<Student> getGrade(int tea_no) {
-        List<Integer>list = subjectService.getClass_no(tea_no);
-        List<Integer>stu_nos = null;
-        for(int i=0;i<list.size();i++) {
-            List<Integer>tmp=studentService.getAllStu_no(list.get(i));
+        List<Integer> list = subjectService.selectSub_noByTea_no(tea_no);
+        List<Integer> stu_nos = null;
+        for (int i = 0; i < list.size(); i++) {
+            List<Integer> tmp = studentService.selectStu_noByClass_no(list.get(i));
             stu_nos.addAll(tmp);
         }
 
-        List<Student>res = null;
-        for(int i=0;i<stu_nos.size();i++) {
-            res.add(studentService.getMessage(stu_nos.get(i)));
+        List<Student> res = null;
+        for (int i = 0; i < stu_nos.size(); i++) {
+            res.add(studentService.selectByStu_no(stu_nos.get(i)));
         }
 
         return res;
@@ -54,10 +59,10 @@ public class TeacherController {
 
     @RequestMapping(value = "/setStudentGrade")
     public void setGrade(@RequestBody Grade grade) {
-        gradeService.setGradeByPK(grade);
+        gradeService.insertGrade(grade);
     }
 
-    @RequestMapping(value = "/getStudentGrade")
+//    @RequestMapping(value = "/getStudentGrades")
 //    public List<Grade> getGrade(int tea_no,int sub_no) {
 //
 //    }

@@ -7,5 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface TeacherMapper {
     Teacher selectByTea_no(int tea_no);
-    void insertTeachers(Teacher teacher);
+
+    void insertTeachers(Teacher[] teachers);
+    void insertTeacher(Teacher teacher);
 }

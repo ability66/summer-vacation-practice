@@ -1,10 +1,10 @@
 package com.example.summer.entity;
 
 public class Teacher {
-    private int tea_no     ;//'教师工号'
-    private int tea_col_no ;//'学院号',
-    private String tea_name   ;//'教师姓名',
-    private String tea_level  ;//'教师职称'
+    private int tea_no;//'教师工号'
+    private int tea_col_no;//'学院号',
+    private String tea_name;//'教师姓名',
+    private String tea_level;//'教师职称'
 
     public int getTea_no() {
         return tea_no;

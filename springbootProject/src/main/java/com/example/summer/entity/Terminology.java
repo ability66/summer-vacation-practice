@@ -1,7 +1,7 @@
 package com.example.summer.entity;
 
 public class Terminology {
-    private int ter_no  ;//'专业号'
+    private int ter_no;//'专业号'
     private String ter_name;//'专业名称'
 
     public int getTer_no() {

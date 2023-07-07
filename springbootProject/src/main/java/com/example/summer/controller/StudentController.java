@@ -1,13 +1,9 @@
 package com.example.summer.controller;
 
-import com.example.summer.entity.ClassTable;
-import com.example.summer.entity.Grade;
-import com.example.summer.entity.Report;
-import com.example.summer.entity.Student;
-import com.example.summer.mapper.ClassMapper;
+import com.example.summer.entity.Class;
+import com.example.summer.entity.*;
 import com.example.summer.service.*;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,24 +23,24 @@ public class StudentController {
     ReportService reportService;
     GradeService gradeService;
 
-    @RequestMapping(value = "/getMessage",method = RequestMethod.GET)
+    @RequestMapping(value = "/getMessage", method = RequestMethod.GET)
     public Student getMessage(int stu_no) {
-        return studentService.getMessage(stu_no);
+        return studentService.selectByStu_no(stu_no);
     }
 
-    @RequestMapping(value = "/getClassTable",method = RequestMethod.GET)
+    @RequestMapping(value = "/getClassTable", method = RequestMethod.GET)
     public List<ClassTable> getClassTableByStu_no(int stu_no) {
-        int cla_no=classService.getCla_noByStu_no(stu_no);
-        return classTableService.getClassTable(cla_no);
+        Class cla = classService.selectClassByStu_no(stu_no);
+        return classTableService.selectClassTableByStu_no(cla.getClass_no());
     }
 
     @RequestMapping(value = "/updateReport")
     public void updateReport(@RequestBody Report report) {
-        reportService.updateReport(report);
+        reportService.insertReport(report);
     }
 
-    @RequestMapping(value = "/getGrade",method = RequestMethod.GET)
+    @RequestMapping(value = "/getGrade", method = RequestMethod.GET)
     public List<Grade> getGrade(int stu_no) {
-        return gradeService.getGradeByStu_no(stu_no);
+        return gradeService.selectByStu_no(stu_no);
     }
 }

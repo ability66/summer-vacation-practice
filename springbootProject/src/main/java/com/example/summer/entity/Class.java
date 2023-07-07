@@ -2,8 +2,8 @@ package com.example.summer.entity;
 
 public class Class {
     private int class_no;//'班级号'
-    private int ter_no  ;//'专业号'
-    private int co_no   ;//'学院号'
+    private int ter_no;//'专业号'
+    private int co_no;//'学院号'
 
     public int getClass_no() {
         return class_no;

@@ -1,9 +1,9 @@
 package com.example.summer.entity;
 
 public class Grade {
-    private int stu_no    ;//'学号',
-    private int sub_no    ;//'课程号',
-    private double grade  ;// '成绩',
+    private int stu_no;//'学号',
+    private int sub_no;//'课程号',
+    private double grade;// '成绩',
 
     public int getStu_no() {
         return stu_no;

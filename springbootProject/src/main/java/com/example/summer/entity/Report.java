@@ -3,11 +3,11 @@ package com.example.summer.entity;
 import java.util.Date;
 
 public class Report {
-    private int re_no       ;//'报告号'
-    private int stu_no      ;//'学号',
-    private int tea_no      ;//'教师工号',
-    private String re_location ;//'文件地址（相对）',
-    private Date upload_date ;//'上传时间',
+    private int re_no;//'报告号'
+    private int stu_no;//'学号',
+    private int tea_no;//'教师工号',
+    private String re_location;//'文件地址（相对）',
+    private Date upload_date;//'上传时间',
 
     public int getRe_no() {
         return re_no;

@@ -1,8 +1,8 @@
 package com.example.summer.entity;
 
 public class Subject {
-    private int sub_no  ;//'课程号'
-    private int tea_no  ;//'教师工号',
+    private int sub_no;//'课程号'
+    private int tea_no;//'教师工号',
     private String sub_name;//'课程名',
 
     public int getSub_no() {

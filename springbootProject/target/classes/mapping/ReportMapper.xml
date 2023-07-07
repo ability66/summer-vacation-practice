@@ -4,7 +4,6 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
@@ -18,7 +17,7 @@
     <select id="selectByStu_nos" resultType="report">
         select * from report where stu_no in
         <foreach collection="array" item="no" open="(" separator="," close=")">
-        #{no}
+            #{no}
         </foreach>
     </select>
 </mapper>

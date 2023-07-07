@@ -1,7 +1,7 @@
 package com.example.summer.entity;
 
 public class College {
-    private int co_no  ;//'学院号'
+    private int co_no;//'学院号'
     private String co_name;//'学院名'
 
     public int getCo_no() {

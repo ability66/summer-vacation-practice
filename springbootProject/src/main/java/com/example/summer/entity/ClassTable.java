@@ -1,11 +1,11 @@
 package com.example.summer.entity;
 
 public class ClassTable {
-    private int class_no      ;// '班级号',
-    private int class_order   ;//'第几节课',
-    private String class_weekday ;// '周几',
-    private int sub_no        ;// '课程号',
-    private int tea_no        ;//'教师工号',
+    private int class_no;// '班级号',
+    private int class_order;//'第几节课',
+    private String class_weekday;// '周几',
+    private int sub_no;// '课程号',
+    private int tea_no;//'教师工号',
 
     public int getClass_no() {
         return class_no;

@@ -4,7 +4,6 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
@@ -14,7 +13,9 @@
         insert into subject values (#{sub_no},#{tea_no},#{sub_name})
     </insert>
     <!--根据工号查课程号-->
-    <select id="selectSub_noByTea_no" resultType="java.lang.Integer">
-        select sub_no from subject where tea_no=#{tea_no}
+    <select id="selectSub_noByTea_no" resultType="Integer">
+        select sub_no
+        from subject
+        where tea_no = #{tea_no}
     </select>
 </mapper>

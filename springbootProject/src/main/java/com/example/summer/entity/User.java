@@ -1,12 +1,12 @@
 package com.example.summer.entity;
 
 public class User {
-    private int user_id  ;//'用户编号'
-    private String username ;//'用户名',
-    private String password ;//'密码，用md5码存储',
-    private String power    ;//'teacher/admin/student',
-    private int tea_no   ;//'教师工号，为教师时填写',
-    private int stu_no   ;//'学生学号，为学生时填写',
+    private int user_id;//'用户编号'
+    private String username;//'用户名',
+    private String password;//'密码，用md5码存储',
+    private String power;//'teacher/admin/student',
+    private int tea_no;//'教师工号，为教师时填写',
+    private int stu_no;//'学生学号，为学生时填写',
 
     public int getUser_id() {
         return user_id;

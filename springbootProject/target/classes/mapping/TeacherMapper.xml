@@ -4,7 +4,6 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
@@ -15,6 +14,8 @@
     </insert>
     <!--根据教师号查信息-->
     <select id="selectByTea_no" resultType="teacher">
-        select * from teacher where tea_no=#{tea_no}
+        select *
+        from teacher
+        where tea_no = #{tea_no}
     </select>
 </mapper>

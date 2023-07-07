@@ -4,28 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="添加了登录的controller和service">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TeacherController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/GradeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/SubjectService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/TeacherService.java" afterDir="false" />
+    <list default="true" id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="完成部分service层书写">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/ClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TeacherController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/ClassTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/ClassTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/College.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Terminology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Terminology.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassTableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassTableMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/GradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/GradeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ReportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ReportMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/StudentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/SubjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/SubjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/TeacherMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/GradeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/SubjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/TeacherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/utils/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/utils/MD5Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ClassMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ClassTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ClassTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/CollegeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CollegeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/GradeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ReportMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ReportMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/SubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/SubjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/TerminologyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TerminologyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/ClassController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/GradeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/controller/StudentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassTableMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassTableMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/GradeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/SubjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/SubjectMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassTableService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassTableService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/GradeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/ReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/SubjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/SubjectService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/TeacherService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/utils/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/utils/MD5Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ClassMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../summer-vacation-practice" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/ClassTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ClassTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/CollegeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/CollegeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/GradeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/ReportMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ReportMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/StudentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/SubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/SubjectMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/TeacherMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/TerminologyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/TerminologyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +93,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
-  <component name="GithubProjectSettings">
-    <option name="branchProtectionPatterns">
-      <list>
-        <option value="main" />
-      </list>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -68,33 +107,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/project backup/青年",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Facet",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.43563217",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "spring.configuration.checksum": "acb38050a66c2700774f872b21e3d5e2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/project backup/青年&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facet&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43563217&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;acb38050a66c2700774f872b21e3d5e2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java" />
@@ -164,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688655113512</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="完成部分service层书写">
+      <created>1688712352668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688712352668</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +230,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="优化好配置准备controller和service" />
     <MESSAGE value="添加了登录的controller和service" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了登录的controller和service" />
+    <MESSAGE value="完成部分service层书写" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成部分service层书写" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

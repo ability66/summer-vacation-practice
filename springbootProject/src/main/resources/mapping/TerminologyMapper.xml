@@ -4,12 +4,12 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-
 <!--
     namespace:名称空间
 -->
 <mapper namespace="com.example.summer.mapper.TerminologyMapper">
     <select id="selectAll" resultType="terminology">
-        select * from terminology
+        select *
+        from terminology
     </select>
 </mapper>
