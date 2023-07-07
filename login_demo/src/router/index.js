@@ -34,14 +34,14 @@ const routes = [
     children:[
       //Teacher
       {
-        path:'TeacherSearchStudent',//子路由不要加"/"
-        name:'teachersearchstudent',
-        component:()=>import('../views/admin/TeacherSearchStudent.vue')
-      },
-      {
-        path:'SearchTeacher',
+        path:'SearchTeacher',//子路由不要加"/"
         name:'searchTeacher',
         component:()=>import('../views/admin/SearchTeacher.vue')
+      },
+      {
+        path:'SetTeacher',
+        name:'setTeacher',
+        component:()=>import('../views/admin/SetTeacher.vue')
       },
       //Student
       {
@@ -64,16 +64,6 @@ const routes = [
         path:'SetSchedule',
         name:'setSchedule',
         component:()=>import('../views/admin/SetSchedule.vue')
-      },
-      {
-        path:'TeacherSearchReport',
-        name:'teachersearchreport',
-        component:()=>import('../views/admin/TeacherSearchReport.vue')
-      },
-      {
-        path:'TeacherSetScore',
-        name:'teachersetscore',
-        component:()=>import('../views/admin/TeacherSetScore.vue')
       }
     ]
   },

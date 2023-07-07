@@ -1,10 +1,10 @@
 <template>
-    <div style="border: 1px solid #000000;">
-      <el-container style="height: 95vh; border: 1px solid #eee;">
-        <el-aside width="220px"  style="background-color: rgb(0, 90, 247)">
-          <div id="logo">
-              LOGO
-          </div>
+  <div style="border: 1px solid #000000;">
+    <el-container style="height: 95vh; border: 1px solid #eee;">
+      <el-aside width="220px" style="background-color: rgb(0, 90, 247)">
+        <div id="logo">
+          LOGO
+        </div>
         <!-- <el-menu :default-openeds="[]">
             <el-submenu index="1">
               <template slot="title" ><i class="el-icon-message"></i>
@@ -38,13 +38,8 @@
           </el-menu> -->
 
         <el-col :span="12">
-          <el-menu
-            default-active="1"
-            default-openeds="[1]"
-            class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
-          >
+          <el-menu default-active="1" default-openeds="[1]" class="el-menu-vertical-demo" @open="handleOpen"
+            @close="handleClose">
             <el-submenu index="1">
               <template slot="title">
                 <i class="el-icon-location"></i>
@@ -53,48 +48,26 @@
               <el-menu-item-group>
                 <template slot="title">教师信息</template>
                 <el-menu-item index="1-1">
-                  <router-link tag="span" id="text" to="/admin/searchTeacher"
-                    >个人信息</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/searchTeacher">查询</router-link>
                 </el-menu-item>
                 <el-menu-item index="1-2">
-                  <router-link tag="span" id="text" to="/admin/TeacherSearchStudent"
-                    >学生查询</router-link
-                  >
-                </el-menu-item>
-                <el-menu-item index="1-3">
-                  <router-link tag="span" id="text" to="/admin/TeacherSearchReport"
-                    >查询报告</router-link
-                  >
-                </el-menu-item>
-                <el-menu-item index="1-4">
-                  <router-link tag="span" id="text" to="/admin/TeacherSetScore"
-                    >成绩设置</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/setTeacher">设置</router-link>
                 </el-menu-item>
               </el-menu-item-group>
               <el-menu-item-group title="学生信息">
                 <el-menu-item index="2-1">
-                  <router-link tag="span" id="text" to="/admin/searchStudent"
-                    >查询</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/searchStudent">查询</router-link>
                 </el-menu-item>
                 <el-menu-item index="2-2">
-                  <router-link tag="span" id="text" to="/admin/setStudent"
-                    >设置</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/setStudent">设置</router-link>
                 </el-menu-item>
               </el-menu-item-group>
               <el-menu-item-group title="课表信息">
                 <el-menu-item index="3-1">
-                  <router-link tag="span" id="text" to="/admin/searchSchedule"
-                    >查询</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/searchSchedule">查询</router-link>
                 </el-menu-item>
                 <el-menu-item index="3-2">
-                  <router-link tag="span" id="text" to="/admin/setSchedule"
-                    >设置</router-link
-                  >
+                  <router-link tag="span" id="text" to="/admin/setSchedule">设置</router-link>
                 </el-menu-item>
               </el-menu-item-group>
             </el-submenu>
@@ -131,7 +104,7 @@
   </div>
 </template>
 
-    <script>
+<script>
 export default {
   name: "tes",
   data() {
@@ -155,20 +128,23 @@ export default {
 };
 </script>
 
-    <style scoped>
-    .el-aside{
-      height: 100%;
-      border-right: 1px solid #eee;
-    }
+<style scoped>
+.el-aside {
+  height: 100%;
+  border-right: 1px solid #eee;
+}
+
 .el-header {
-    background-color: #B3C0D1;
+  background-color: #B3C0D1;
   color: #333;
   line-height: 60px;
 }
+
 .el-col-12 {
   width: 100%;
 }
-    #logo{
+
+#logo {
   height: 60px;
   line-height: 60px;
   font-size: 20px;
