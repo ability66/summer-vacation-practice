@@ -10,5 +10,5 @@ import java.util.List;
 public interface GradeMapper {
     List<Subject> selectByStu_no(int stu_no);
     List<Subject> selectByStu_noClass_no(int stu_no,int class_no);
-    void insertGrades(@Param("gardes") Grade[] grades);
+    void insertGrades(Grade[] grades);
 }

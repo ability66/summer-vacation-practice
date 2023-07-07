@@ -11,14 +11,16 @@
 <mapper namespace="com.example.summer.mapper.GradeMapper">
     <!--设置各科成绩-->
     <insert id="insertGrades">
-
+        insert into grade values <foreach collection="array" item="grade" separator=",">
+        (#{grade.stu_no},#{grade.sub_no},#{grade.grade})
+    </foreach>
     </insert>
     <!--根据学号查询各科成绩-->
     <select id="selectByStu_no" resultType="grade">
-
+        select * from grade where stu_no=#{stu_no}
     </select>
     <!--根据学号，课程号查询成绩-->
     <select id="selectByStu_noClass_no" resultType="grade">
-
+        select * from grade where (stu_no=#{stu_no})and (sub_no=#{sub_no})
     </select>
 </mapper>

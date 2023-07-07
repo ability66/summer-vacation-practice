@@ -11,11 +11,11 @@
 <mapper namespace="com.example.summer.mapper.StudentMapper">
     <!--设置学生信息-->
     <insert id="insertStudent">
-
+        insert into student values (#{stu_no},#{stuname},#{stusex},#{stuyear},#{ter_no})
     </insert>
     <!--设置学生班级-->
     <insert id="insertStudentClass">
-
+        insert into classtostudent values (#{class_no},#{stu_no})
     </insert>
     <!--根据学号查询信息-->
     <select id="selectByStu_no" resultType="student">
@@ -23,6 +23,6 @@
     </select>
     <!--根据班级号查所有学号-->
     <select id="selectStu_noByClass_no" resultType="java.lang.Integer">
-
+        select stu_no from classtostudent where class_no=#{class_no}
     </select>
 </mapper>

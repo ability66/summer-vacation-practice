@@ -11,10 +11,10 @@
 <mapper namespace="com.example.summer.mapper.SubjectMapper">
     <!--设置课程信息-->
     <insert id="insertSubject">
-
+        insert into subject values (#{sub_no},#{tea_no},#{sub_name})
     </insert>
     <!--根据工号查课程号-->
     <select id="selectSub_noByTea_no" resultType="java.lang.Integer">
-
+        select sub_no from subject where tea_no=#{tea_no}
     </select>
 </mapper>

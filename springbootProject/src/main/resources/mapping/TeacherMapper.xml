@@ -11,10 +11,10 @@
 <mapper namespace="com.example.summer.mapper.TeacherMapper">
     <!--插入教师信息-->
     <insert id="insertTeachers">
-
+        insert into teacher values (#{tea_no},#{tea_col_no},#{tea_name},#{tea_level})
     </insert>
     <!--根据教师号查信息-->
     <select id="selectByTea_no" resultType="teacher">
-
+        select * from teacher where tea_no=#{tea_no}
     </select>
 </mapper>
