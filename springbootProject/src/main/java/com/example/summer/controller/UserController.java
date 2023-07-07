@@ -28,11 +28,11 @@ public class UserController {
     @RequestMapping(value = "/loginIn",method = RequestMethod.GET)
     public String login(String username,String password){
         User user = new User();
+        password=MD5Util.MD5EncodeUtf8(password);
 
         user.setUsername(username);
         user.setPassword(password);
 
-        System.out.println(username);
         User ruser= userService.LoginIn(username);
         if(user.getUsername().equals("admin")&&user.getPassword().equals("admin")) {
             return "admin";
@@ -49,6 +49,6 @@ public class UserController {
                 return "teacher";
             }
         }
-        return null;
+        return "password error";
     }
 }

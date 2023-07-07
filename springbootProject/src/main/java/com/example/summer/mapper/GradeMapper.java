@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 @Repository
 public interface GradeMapper {
-    List<Subject> selectByStu_no(int stu_no);
-    List<Subject> selectByStu_noClass_no(int stu_no,int class_no);
+    List<Grade> selectByStu_no(int stu_no);
+    List<Grade> selectByStu_noClass_no(int stu_no,int class_no);
     void insertGrades(@Param("gardes") Grade[] grades);
 }

@@ -10,7 +10,7 @@
 -->
 <mapper namespace="com.example.summer.mapper.ClassMapper">
     <!---学号查询班级号-->
-    <select id="selectClassByStu_no" resultType="class">
+    <select id="selectClassByStu_no" resultType="integer">
 
     </select>
 </mapper>
