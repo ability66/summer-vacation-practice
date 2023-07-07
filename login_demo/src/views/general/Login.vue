@@ -162,7 +162,7 @@ export default {
         },
         //登录
         async login() {
-            console.log(this.loginData.username);
+
             try {
                 // 发送登录请求
                 const url = `${backendURL}/user/loginIn?username=${encodeURIComponent(this.loginData.username)}&password=${encodeURIComponent(this.loginData.password)}`;                const response = await axios.get(url);
