@@ -6,14 +6,19 @@
         </div>
         <div id="login">
             <el-card class="box-card">
-                <div id="form">
-                    <el-input v-model="username" placeholder="Username"></el-input>
-                    <el-input placeholder="Password" v-model="password" show-password></el-input>
-                    <el-input v-model="code" placeholder="验证码"></el-input>
+                <el-form ref="loginForm" :model="loginData">
+                    <el-form-item label="用户名" prop="username">
+                        <el-input v-model="loginData.username" placeholder="Username"></el-input>                        
+                    </el-form-item>
+                    <el-form-item label="密码" prop="password">
+                        <el-input placeholder="Password" v-model="loginData.password" type="password" show-password></el-input>
+                    </el-form-item>
+                    <el-form-item label="验证码" prop="code">
+                        <el-input v-model="code" placeholder="验证码"></el-input>
+                    </el-form-item>
                     <el-button type="primary" @click="login">LOGIN</el-button>
                     <el-button type="primary" @click="jumptoindex">Jump</el-button>
-                
-                </div>
+                </el-form>
             </el-card>
         </div>
         <div id="clock">
@@ -69,17 +74,17 @@
     }
     #login{
         position: absolute;
-        top: 30%;
+        top: 25%;
         left: 38%;
     }
     .el-card {
         width: 373px;
-        height: 271px;
+        height: 400px;
         background-color: rgba(255, 255, 255, 0.4);
         border-radius:10px;
     }
-    #form{
-        line-height: 60px;
+    .el-form{
+        line-height: 10px;
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -108,11 +113,18 @@
   </style>
   
 <script>
+import axios from 'axios';
+
+
+const backendURL = 'http://localhost:8181';
+
 export default {
     data() {
         return {
-            username: '',
-            password: '',
+            loginData:{
+                username: '',
+                password: ''
+            },
             code: '',
             time: '',
             date: '',
@@ -120,6 +132,7 @@ export default {
         }
     },
     methods: {
+        //实时更新时间
         update_clock: function (e) {
             var today = new Date();
             var h = today.getHours();
@@ -147,38 +160,39 @@ export default {
             this.time = h + ":" + m;
             this.date = y + "-" + mo + "-" + d;
         },
-        login() {
-            // 构建登录请求的数据
-            const data = {
-                username: this.username,
-                password: this.password,
-                code: this.code
-            };
+        //登录
+        async login() {
+            console.log(this.loginData.username);
+            try {
+                // 发送登录请求
+                const url = `${backendURL}/user/loginIn?username=${encodeURIComponent(this.loginData.username)}&password=${encodeURIComponent(this.loginData.password)}`;                const response = await axios.get(url);
+                console.log('loginData/n');
+                console.log(this.loginData.username);
+                console.log('response.data/n');
+                console.log(response.data);
+                // 登录成功
+                if (response.data === 'admin') {
+                    // 跳转到管理员页面
+                    window.location.href = '/admin';
+                } else if (response.data === 'student') {
+                    // 跳转到学生页面
+                    window.location.href = '/student';
+                } else if (response.data === 'teacher') {
+                    // 跳转到教师页面
+                    window.location.href = '/teacher';
+                } else {
+                    // 显示错误消息
+                    console.log('登录失败');
+                }
+            } catch(error) {
+                console.log('error');
+            }
 
-            // 发送登录请求
-            axios.post('/api/login', data)
-                .then(response => {
-                    console.log("response");
-                    // 登录成功
-                    if (response.data.success) {
-                        // 保存token到本地存储
-                        localStorage.setItem('token', response.data.token);
-                        // 跳转到Index.vue
-                        this.$router.push('/index');
-                    } else {
-                        // 登录失败，提示重新输入
-                        alert('登录失败，请重新输入');
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
-                    // 处理请求错误
-                    alert('登录失败，请稍后重试');
-                });
         },
         jumptoindex(){
-            this.$router.push('/Admin');
+            window.location.href = '/admin';
         }
+
     },
     mounted() {
         setInterval(this.update_clock, 1000);

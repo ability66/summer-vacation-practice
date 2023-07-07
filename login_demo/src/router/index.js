@@ -84,7 +84,7 @@ const routes = [
   {
     path:'/Index',
     name:'index',
-    component:()=>import('../views/student/Student.vue'),
+    component:()=>import('../views/general/Index.vue'),
     children:[
       {
         path:'/Index1',

@@ -1,7 +1,7 @@
 <template>
-    <div>
-      <el-container style="height: 100%; border: 1px solid #eee;">
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+    <div style="border: 1px solid #000000;">
+      <el-container style="height: 95vh; border: 1px solid #eee;">
+        <el-aside width="220px"  style="background-color: rgb(0, 90, 247)">
           <div id="logo">
               LOGO
           </div>
@@ -94,14 +94,7 @@
 
           <el-main >
             <router-view/>
-            <el-table :data="tableData">
-              <el-table-column prop="date" label="日期" width="140">
-              </el-table-column>
-              <el-table-column prop="name" label="姓名" width="120">
-              </el-table-column>
-              <el-table-column prop="address" label="地址">
-              </el-table-column>
-            </el-table>
+
           </el-main>
         </el-container>
       </el-container>
@@ -134,7 +127,11 @@
     </script>
 
     <style scoped>
-      .el-header {
+    .el-aside{
+      height: 100%;
+      border-right: 1px solid #eee;
+    }
+   .el-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
