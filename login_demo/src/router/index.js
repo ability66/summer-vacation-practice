@@ -19,7 +19,7 @@ const routes = [
     component:Index,
     children:[
       {
-        path:'/Index1',
+        path:'Index1',
         name:'index1',
         component:()=>import('../views/general/Index1.vue')
       }
@@ -82,14 +82,29 @@ const routes = [
   },
   // Student路由
   {
-    path:'/Index',
-    name:'index',
-    component:()=>import('../views/student/Student.vue'),
+    path:'/Student',
+    name:'Student',
+    component: ()=>import('../views/student/Student.vue'),
     children:[
       {
-        path:'/Index1',
-        name:'index1',
-        component:()=>import('../views/general/Index1.vue')
+        path:'student_info',
+        name:'student_info',
+        component:()=>import('../views/student/student_info.vue')
+      },
+      {
+        path:'student_score',
+        name:'student_score',
+        component:()=>import('../views/student/student_score.vue')
+      },
+      {
+        path:'student_course',
+        name:'student_course',
+        component:()=>import('../views/student/student_course.vue')
+      },
+      {
+        path:'student_upload',
+        name:'student_upload',
+        component:()=>import('../views/student/student_upload.vue')
       }
     ]
   }
