@@ -5,7 +5,7 @@
           <div id="logo">
               LOGO
           </div>
-          <!-- <el-menu :default-openeds="[]">
+        <!-- <el-menu :default-openeds="[]">
             <el-submenu index="1">
               <template slot="title" ><i class="el-icon-message"></i>
               <span id="text">
@@ -160,19 +160,19 @@ export default {
       height: 100%;
       border-right: 1px solid #eee;
     }
-   .el-header {
+.el-header {
     background-color: #B3C0D1;
-    color: #333;
-    line-height: 60px;
-  }
-  .el-col-12 {
-    width: 100%;
-  }
+  color: #333;
+  line-height: 60px;
+}
+.el-col-12 {
+  width: 100%;
+}
     #logo{
-      height: 60px;
-      line-height: 60px;
-      font-size: 20px;
-      text-align: center;
-      color: #5de051;
-    }
-    </style>
+  height: 60px;
+  line-height: 60px;
+  font-size: 20px;
+  text-align: center;
+  color: #5de051;
+}
+</style>
