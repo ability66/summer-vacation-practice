@@ -10,7 +10,14 @@
 <mapper namespace="com.example.summer.mapper.TeacherMapper">
     <!--插入教师信息-->
     <insert id="insertTeachers">
-        insert into teacher values (#{tea_no},#{tea_col_no},#{tea_name},#{tea_level})
+        insert into teacher values
+        <foreach collection="array" item="teacher" separator=",">
+            (#{tea_no},#{tea_col_no},#{tea_name},#{tea_level})
+        </foreach>
+    </insert>
+    <insert id="insertTeacher">
+        insert into teacher
+        values (#{tea_no}, #{tea_col_no}, #{tea_name}, #{tea_level})
     </insert>
     <!--根据教师号查信息-->
     <select id="selectByTea_no" resultType="teacher">

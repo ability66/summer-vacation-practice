@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     username: root
-    password: 200212
+    password: 1234
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test1?usaSSL=false
+    url: jdbc:mysql://localhost:3306/2023summer?usaSSL=false
 
 mybatis:
   mapper-locations: classpath:mapping/*.xml

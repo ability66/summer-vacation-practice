@@ -20,4 +20,8 @@ public class UserService {
     public User LoginIn(String username) {
         return userMapper.selectByUsername(username);
     }
+
+    public void insertUser(User user) {
+        userMapper.insertUser(user);
+    }
 }

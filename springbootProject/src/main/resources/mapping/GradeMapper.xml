@@ -16,7 +16,8 @@
         </foreach>
     </insert>
     <insert id="insertGrade">
-        insert into grade values (#{grade.stu_no},#{grade.sub_no},#{grade.grade})
+        insert into grade
+        values (#{stu_no}, #{sub_no}, #{grade})
     </insert>
     <!--根据学号查询各科成绩-->
     <select id="selectByStu_no" resultType="grade">

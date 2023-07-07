@@ -16,7 +16,8 @@
         </foreach>
     </insert>
     <insert id="insertTeacher">
-        insert into teacher values (#{tea_no},#{tea_col_no},#{tea_name},#{tea_level})
+        insert into teacher
+        values (#{tea_no}, #{tea_col_no}, #{tea_name}, #{tea_level})
     </insert>
     <!--根据教师号查信息-->
     <select id="selectByTea_no" resultType="teacher">

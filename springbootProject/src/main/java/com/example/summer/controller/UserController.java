@@ -4,6 +4,7 @@ import com.example.summer.entity.User;
 import com.example.summer.service.UserService;
 import com.example.summer.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,16 +23,16 @@ public class UserController {
     }
 
     //登录请求
-    @RequestMapping(value = "/loginIn", method = RequestMethod.GET)
-    public String login(String username, String password) {
-        User user = new User();
+    @RequestMapping(value = "/loginIn", method = RequestMethod.POST)
+    public String login(@RequestBody User user) {
+        String password= user.getPassword();
+        String username= user.getUsername();
         password = MD5Util.MD5EncodeUtf8(password);
 
-        user.setUsername(username);
         user.setPassword(password);
 
         User ruser = userService.LoginIn(username);
-        if (user.getUsername().equals("admin") && user.getPassword().equals("admin")) {
+        if (user.getUsername().equals("admin") && user.getPassword().equals(MD5Util.MD5EncodeUtf8("admin"))) {
             return "admin";
         }
         if (ruser == null) {

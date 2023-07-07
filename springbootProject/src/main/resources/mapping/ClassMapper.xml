@@ -9,9 +9,9 @@
 -->
 <mapper namespace="com.example.summer.mapper.ClassMapper">
     <!---学号查询班级号-->
-    <select id="selectClassByStu_no" resultType="class">
-        select *
-        from class
-        where class_no = (select class_no from classtostudent where stu_no = #{stu_no})
+    <select id="selectClassByStu_no" resultType="integer">
+        select class_no
+        from classtostudent
+        where stu_no = #{stu_no}
     </select>
 </mapper>

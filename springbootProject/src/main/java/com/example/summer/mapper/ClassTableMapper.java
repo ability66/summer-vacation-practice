@@ -10,7 +10,7 @@ import java.util.List;
 public interface ClassTableMapper {
     List<ClassTable> selectClassTableByStu_no(int class_no);
 
-    int selectClass_noBySub_no(int sub_no);
+    List<Integer> selectClass_noBySub_no(int sub_no);
 
     void insertClassTable(ClassTable classTable);
 }

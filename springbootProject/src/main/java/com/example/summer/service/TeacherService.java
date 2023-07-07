@@ -17,6 +17,7 @@ public class TeacherService {
     public void insertTeachers(Teacher[] teachers) {
         teacherMapper.insertTeachers(teachers);
     }
+
     public void insertTeacher(Teacher teacher) {
         teacherMapper.insertTeacher(teacher);
     }

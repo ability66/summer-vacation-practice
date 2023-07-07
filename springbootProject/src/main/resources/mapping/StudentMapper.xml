@@ -10,11 +10,13 @@
 <mapper namespace="com.example.summer.mapper.StudentMapper">
     <!--设置学生信息-->
     <insert id="insertStudent">
-        insert into student values (#{stu_no},#{stuname},#{stusex},#{stuyear},#{ter_no})
+        insert into student
+        values (#{stu_no}, #{stu_name}, #{stu_sex}, #{stu_year}, #{ter_no})
     </insert>
     <!--设置学生班级-->
     <insert id="insertStudentClass">
-        insert into classtostudent values (#{class_no},#{stu_no})
+        insert into classtostudent
+        values (#{class_no}, #{stu_no})
     </insert>
     <!--根据学号查询信息-->
     <select id="selectByStu_no" resultType="student">

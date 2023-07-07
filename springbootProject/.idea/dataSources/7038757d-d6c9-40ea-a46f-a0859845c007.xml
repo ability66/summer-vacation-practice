@@ -799,368 +799,345 @@
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <Position>5</Position>
     </column>
-    <foreign-key id="229" parent="205" name="classtable_subject__fk">
-      <ColNames>sub_no</ColNames>
-      <RefColNames>sub_no</RefColNames>
-      <RefTableName>subject</RefTableName>
-    </foreign-key>
-    <foreign-key id="230" parent="205" name="classtable_teacher__fk">
-      <ColNames>tea_no</ColNames>
-      <RefColNames>tea_no</RefColNames>
-      <RefTableName>teacher</RefTableName>
-    </foreign-key>
-    <index id="231" parent="205" name="PRIMARY">
+    <index id="229" parent="205" name="PRIMARY">
       <ColNames>class_no
 class_order
 class_weekday</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="232" parent="205" name="ClassNo">
+    <index id="230" parent="205" name="ClassNo">
       <ColNames>class_no</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="233" parent="205" name="classtable_subject__fk">
+    <index id="231" parent="205" name="classtable_subject__fk">
       <ColNames>sub_no</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="234" parent="205" name="classtable_teacher__fk">
+    <index id="232" parent="205" name="classtable_teacher__fk">
       <ColNames>tea_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="235" parent="205" name="PRIMARY">
+    <key id="233" parent="205" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="236" parent="206" name="class_no">
+    <column id="234" parent="206" name="class_no">
       <Comment>班级号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="237" parent="206" name="stu_no">
+    <column id="235" parent="206" name="stu_no">
       <Comment>学号</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <foreign-key id="238" parent="206" name="classtostudent_student__fk">
+    <foreign-key id="236" parent="206" name="classtostudent_student__fk">
       <ColNames>stu_no</ColNames>
       <RefColNames>stu_no</RefColNames>
       <RefTableName>student</RefTableName>
     </foreign-key>
-    <index id="239" parent="206" name="PRIMARY">
-      <ColNames>class_no</ColNames>
+    <index id="237" parent="206" name="PRIMARY">
+      <ColNames>stu_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="240" parent="206" name="classtostudent_student__fk">
+    <index id="238" parent="206" name="classtostudent_student__fk">
       <ColNames>stu_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="241" parent="206" name="PRIMARY">
+    <key id="239" parent="206" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="242" parent="207" name="co_no">
+    <column id="240" parent="207" name="co_no">
       <Comment>学院号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="243" parent="207" name="co_name">
+    <column id="241" parent="207" name="co_name">
       <Comment>学院名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <index id="244" parent="207" name="PRIMARY">
+    <index id="242" parent="207" name="PRIMARY">
       <ColNames>co_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="245" parent="207" name="PRIMARY">
+    <key id="243" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="246" parent="208" name="stu_no">
+    <column id="244" parent="208" name="stu_no">
       <Comment>学号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="247" parent="208" name="sub_no">
+    <column id="245" parent="208" name="sub_no">
       <Comment>课程号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="248" parent="208" name="grade">
+    <column id="246" parent="208" name="grade">
       <Comment>成绩</Comment>
       <DataType>double|0s</DataType>
       <Position>3</Position>
     </column>
-    <index id="249" parent="208" name="PRIMARY">
+    <index id="247" parent="208" name="PRIMARY">
       <ColNames>stu_no
 sub_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="250" parent="208" name="PRIMARY">
+    <key id="248" parent="208" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="251" parent="209" name="re_no">
+    <column id="249" parent="209" name="re_no">
       <AutoIncrement>1</AutoIncrement>
       <Comment>报告号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="252" parent="209" name="stu_no">
+    <column id="250" parent="209" name="stu_no">
       <Comment>学号</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="253" parent="209" name="tea_no">
+    <column id="251" parent="209" name="tea_no">
       <Comment>教师工号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="254" parent="209" name="re_location">
+    <column id="252" parent="209" name="re_location">
       <Comment>文件地址（相对）</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="255" parent="209" name="upload_date">
+    <column id="253" parent="209" name="upload_date">
       <Comment>上传时间</Comment>
       <DataType>datetime|0s</DataType>
       <Position>5</Position>
     </column>
-    <foreign-key id="256" parent="209" name="report_student__fk">
+    <foreign-key id="254" parent="209" name="report_student__fk">
       <ColNames>stu_no</ColNames>
       <RefColNames>stu_no</RefColNames>
       <RefTableName>student</RefTableName>
     </foreign-key>
-    <foreign-key id="257" parent="209" name="report_teacher__fk">
+    <foreign-key id="255" parent="209" name="report_teacher__fk">
       <ColNames>tea_no</ColNames>
       <RefColNames>tea_no</RefColNames>
       <RefTableName>teacher</RefTableName>
     </foreign-key>
-    <index id="258" parent="209" name="PRIMARY">
+    <index id="256" parent="209" name="PRIMARY">
       <ColNames>re_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="259" parent="209" name="report_student__fk">
+    <index id="257" parent="209" name="report_student__fk">
       <ColNames>stu_no</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="260" parent="209" name="report_teacher__fk">
+    <index id="258" parent="209" name="report_teacher__fk">
       <ColNames>tea_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="261" parent="209" name="PRIMARY">
+    <key id="259" parent="209" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="262" parent="210" name="stu_no">
-      <AutoIncrement>2</AutoIncrement>
+    <column id="260" parent="210" name="stu_no">
+      <AutoIncrement>3326</AutoIncrement>
       <Comment>学号</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="263" parent="210" name="stu_name">
+    <column id="261" parent="210" name="stu_name">
       <Comment>姓名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="264" parent="210" name="stu_sex">
+    <column id="262" parent="210" name="stu_sex">
       <Comment>性别</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="265" parent="210" name="stu_year">
+    <column id="263" parent="210" name="stu_year">
       <Comment>入学年</Comment>
       <DataType>year(4)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="266" parent="210" name="ter_no">
+    <column id="264" parent="210" name="ter_no">
       <Comment>专业号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <Position>5</Position>
     </column>
-    <foreign-key id="267" parent="210" name="student_teacher__fk">
-      <ColNames>ter_no</ColNames>
-      <RefColNames>tea_no</RefColNames>
-      <RefTableName>teacher</RefTableName>
-    </foreign-key>
-    <index id="268" parent="210" name="PRIMARY">
+    <index id="265" parent="210" name="PRIMARY">
       <ColNames>stu_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="269" parent="210" name="student_teacher__fk">
+    <index id="266" parent="210" name="student_teacher__fk">
       <ColNames>ter_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="270" parent="210" name="PRIMARY">
+    <key id="267" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="271" parent="211" name="sub_no">
+    <column id="268" parent="211" name="sub_no">
       <AutoIncrement>1</AutoIncrement>
       <Comment>课程号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="272" parent="211" name="tea_no">
+    <column id="269" parent="211" name="tea_no">
       <Comment>教师工号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="273" parent="211" name="sub_name">
+    <column id="270" parent="211" name="sub_name">
       <Comment>课程名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <foreign-key id="274" parent="211" name="subject_teacher__fk">
+    <foreign-key id="271" parent="211" name="subject_teacher__fk">
       <ColNames>tea_no</ColNames>
       <RefColNames>tea_no</RefColNames>
       <RefTableName>teacher</RefTableName>
     </foreign-key>
-    <index id="275" parent="211" name="PRIMARY">
+    <index id="272" parent="211" name="PRIMARY">
       <ColNames>sub_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="276" parent="211" name="subject_teacher__fk">
+    <index id="273" parent="211" name="subject_teacher__fk">
       <ColNames>tea_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="277" parent="211" name="PRIMARY">
+    <key id="274" parent="211" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="278" parent="212" name="tea_no">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="275" parent="212" name="tea_no">
+      <AutoIncrement>3233</AutoIncrement>
       <Comment>教师工号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="279" parent="212" name="tea_col_no">
+    <column id="276" parent="212" name="tea_col_no">
       <Comment>学院号</Comment>
       <DataType>int(11)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="280" parent="212" name="tea_name">
+    <column id="277" parent="212" name="tea_name">
       <Comment>教师姓名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="281" parent="212" name="tea_level">
+    <column id="278" parent="212" name="tea_level">
       <Comment>教师职称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <index id="282" parent="212" name="PRIMARY">
+    <index id="279" parent="212" name="PRIMARY">
       <ColNames>tea_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="283" parent="212" name="PRIMARY">
+    <key id="280" parent="212" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="284" parent="213" name="ter_no">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="281" parent="213" name="ter_no">
+      <AutoIncrement>2</AutoIncrement>
       <Comment>专业号</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="285" parent="213" name="ter_name">
+    <column id="282" parent="213" name="ter_name">
       <Comment>专业名称</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <index id="286" parent="213" name="PRIMARY">
+    <index id="283" parent="213" name="PRIMARY">
       <ColNames>ter_no</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="287" parent="213" name="PRIMARY">
+    <key id="284" parent="213" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="288" parent="214" name="user_id">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="285" parent="214" name="user_id">
+      <AutoIncrement>17</AutoIncrement>
       <Comment>用户编号</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="289" parent="214" name="username">
+    <column id="286" parent="214" name="username">
       <Comment>用户名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="290" parent="214" name="password">
+    <column id="287" parent="214" name="password">
       <Comment>密码，用md5码存储</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>3</Position>
     </column>
-    <column id="291" parent="214" name="power">
+    <column id="288" parent="214" name="power">
       <Comment>teacher/admin/student</Comment>
       <DataType>varchar(255)|0s</DataType>
       <Position>4</Position>
     </column>
-    <column id="292" parent="214" name="tea_no">
+    <column id="289" parent="214" name="tea_no">
       <Comment>教师工号，为教师时填写</Comment>
       <DataType>int(10) unsigned zerofill|0s</DataType>
       <Position>5</Position>
     </column>
-    <column id="293" parent="214" name="stu_no">
+    <column id="290" parent="214" name="stu_no">
       <Comment>学生学号，为学生时填写</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
       <Position>6</Position>
     </column>
-    <foreign-key id="294" parent="214" name="userform_teacher__fk">
-      <ColNames>tea_no</ColNames>
-      <RefColNames>tea_no</RefColNames>
-      <RefTableName>teacher</RefTableName>
-    </foreign-key>
-    <foreign-key id="295" parent="214" name="userform_student__fk">
-      <ColNames>stu_no</ColNames>
-      <RefColNames>stu_no</RefColNames>
-      <RefTableName>student</RefTableName>
-    </foreign-key>
-    <index id="296" parent="214" name="PRIMARY">
+    <index id="291" parent="214" name="PRIMARY">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="297" parent="214" name="userform_teacher__fk">
+    <index id="292" parent="214" name="userform_teacher__fk">
       <ColNames>tea_no</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="298" parent="214" name="userform_student__fk">
+    <index id="293" parent="214" name="userform_student__fk">
       <ColNames>stu_no</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="299" parent="214" name="PRIMARY">
+    <key id="294" parent="214" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

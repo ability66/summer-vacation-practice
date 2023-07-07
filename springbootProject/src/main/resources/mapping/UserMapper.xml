@@ -9,12 +9,13 @@
 -->
 <mapper namespace="com.example.summer.mapper.UserMapper">
     <!--设置用户（添加返回数据的主键）-->
-    <insert id="insertUser" useGeneratedKeys="true" keyProperty="true">
-        insert into user values (#{user_id},#{username},#{password},
-        #{power},#{tea_no},#{stu_no})
+    <insert id="insertUser">
+        insert into user
+        values (#{user_id}, #{username}, #{password},
+                #{power}, #{tea_no}, #{stu_no})
     </insert>
     <!--    查找所有用户-->
-    <select id="selectAll" resultType="user">
+    <select id="list" resultType="user">
         select *
         from user
     </select>

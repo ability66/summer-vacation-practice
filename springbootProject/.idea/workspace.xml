@@ -4,73 +4,114 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="完成部分service层书写">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/AdminController.java" afterDir="false" />
+    <list default="true" id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="后端只差报告的查重部分，待检验正确性">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_SparseBitSet_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_1_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_rototor_pdfbox_graphics2d_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_5_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_5_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_lite_5_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_santuario_xmlsec_2_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_all_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_anim_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_awt_util_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_bridge_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_codec_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_constants_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_css_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_dom_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ext_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_extension_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gui_util_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gvt_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_i18n_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_parser_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_rasterizer_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_rasterizer_ext_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_script_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_shared_resources_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_slideshow_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_squiggle_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_squiggle_ext_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svg_dom_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgbrowser_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svggen_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgpp_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgrasterizer_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_swing_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_transcoder_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ttf2svg_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_util_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_xml_1_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_2_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_2_0_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_ext_1_3_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ikanalyzer_2012_u6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/cosSimilar/CosineSimilarAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/cosSimilar/DataVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/cosSimilar/SegVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/cosSimilar/SimpleSummariserAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/cosSimilar/TfIdfAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ikanalyzer-2012_u6.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7038757d-d6c9-40ea-a46f-a0859845c007.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7038757d-d6c9-40ea-a46f-a0859845c007.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/ClassController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springbootProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springbootProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/StudentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TeacherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TeacherController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/TestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Class.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/ClassTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/ClassTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/College.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/College.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Report.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Report.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Subject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Terminology.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/Terminology.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassTableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ClassTableMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/GradeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/GradeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ReportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/ReportMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/StudentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/StudentMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/SubjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/SubjectMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/TeacherMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/TeacherMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ClassTableService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/SubjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/SubjectService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/TeacherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/TeacherService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/summer/utils/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/summer/utils/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ClassMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ClassTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ClassTableMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/CollegeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/CollegeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/GradeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/ReportMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/ReportMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/StudentMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/SubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/SubjectMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/TerminologyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/TerminologyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapping/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/ClassController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/GradeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/StudentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/controller/StudentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/GradeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/GradeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/SubjectMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/SubjectMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassTableMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/ClassTableMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/TeacherMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/mapper/TeacherMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassTableService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/ClassTableService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/GradeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/GradeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/ReportService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/StudentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/SubjectService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/SubjectService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/TeacherService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/TeacherService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/utils/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/utils/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/summer/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/summer/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/ClassMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ClassMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/ClassTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ClassTableMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/CollegeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/CollegeMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/GradeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/GradeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/ReportMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/ReportMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/StudentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/StudentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/SubjectMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/SubjectMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/TeacherMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/TeacherMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapping/TerminologyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/TerminologyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapping/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,41 +148,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/project backup/青年&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facet&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43563217&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;acb38050a66c2700774f872b21e3d5e2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lhk/OneDrive/桌面/2023实训/springbootProject/springbootProject/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.43563217",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "acb38050a66c2700774f872b21e3d5e2",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\resources" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java\com\example\summer" />
       <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java" />
       <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\resources\mapping" />
       <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java\com\example\springbootproject" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.summer.controller" />
+    </key>
   </component>
-  <component name="RunManager" selected="应用程序.ReportService">
+  <component name="RunManager" selected="Spring Boot.SpringbootProjectApplication">
     <configuration name="ReportService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.summer.service.ReportService" />
       <module name="springbootProject" />
@@ -155,6 +206,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="user.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="7038757d-d6c9-40ea-a46f-a0859845c007/schema/2023summer/table/user.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
     <configuration name="SpringbootProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
@@ -167,6 +223,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="数据库脚本.user.sql" />
         <item itemvalue="应用程序.ReportService" />
       </list>
     </recent_temporary>
@@ -210,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688712352668</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="后端只差报告的查重部分，待检验正确性">
+      <created>1688714422421</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688714422421</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +295,8 @@
     <MESSAGE value="优化好配置准备controller和service" />
     <MESSAGE value="添加了登录的controller和service" />
     <MESSAGE value="完成部分service层书写" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成部分service层书写" />
+    <MESSAGE value="后端只差报告的查重部分，待检验正确性" />
+    <option name="LAST_COMMIT_MESSAGE" value="后端只差报告的查重部分，待检验正确性" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

@@ -25,5 +25,6 @@ public class GradeService {
     }
 
     public void insertGrade(Grade grade) {
+        gradeMapper.insertGrade(grade);
     }
 }

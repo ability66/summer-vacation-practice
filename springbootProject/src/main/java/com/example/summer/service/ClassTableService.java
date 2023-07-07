@@ -16,7 +16,7 @@ public class ClassTableService {
         return classTableMapper.selectClassTableByStu_no(class_no);
     }
 
-    public int selectClass_noBySub_no(int sub_no) {
+    public List<Integer> selectClass_noBySub_no(int sub_no) {
         return classTableMapper.selectClass_noBySub_no(sub_no);
     }
 
