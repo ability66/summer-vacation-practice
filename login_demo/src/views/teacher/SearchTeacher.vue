@@ -1,11 +1,12 @@
 <template>
+  <el-card class="box-card" style="height: 80vh">
   <div class="container-SearchTeacher">
     <el-breadcrumb separator-class="el-icon-arrow-right" class="el-icon">
       <el-breadcrumb-item :to="{ path: '/Admin' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item>教师查询</el-breadcrumb-item>
       <el-breadcrumb-item>个人信息</el-breadcrumb-item>
     </el-breadcrumb>
-
+<div class="info">
     <el-form
       ref="form"
       :model="form"
@@ -50,7 +51,9 @@
         ></el-input>
       </el-form-item>
     </el-form>
+</div>
   </div>
+  </el-card>
 </template>
   <script>
 export default {
@@ -69,12 +72,17 @@ export default {
 </script>
   <style>
 .container-SearchTeacher {
-  height: 100%;
+  /*height: 100%;*/
   background-color: #fff;
 }
 .el-icon {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 15px;
+}
+.info{
+  margin-top: 13vh;
+  display: flex;
+  align-items: center;
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+  <el-card class="box-card" style="height: 80vh;position: relative">
   <div class="container-SearchTeacher" style="text-align: left">
     <el-breadcrumb separator-class="el-icon-arrow-right" class="el-icon">
       <el-breadcrumb-item :to="{ path: '/Admin' }">首页</el-breadcrumb-item>
@@ -21,12 +22,12 @@
       </el-form-item>
     </el-form>
 
-    <el-table :data="tableData" border style="width: 725px">
-      <el-table-column fixed prop="stuno" label="学号" width="180">
+    <el-table :data="tableData" border style="width: 75vw">
+      <el-table-column fixed prop="stuno" label="学号" width="250">
       </el-table-column>
-      <el-table-column prop="name" label="姓名" width="180"> </el-table-column>
-      <el-table-column prop="score" label="得分" width="180"> </el-table-column>
-      <el-table-column fixed="right" label="操作" width="180">
+      <el-table-column prop="name" label="姓名" width="250" aria-posinset="center"> </el-table-column>
+      <el-table-column prop="score" label="得分" width="250"> </el-table-column>
+      <el-table-column fixed="right" label="操作" width="250">
         <template>
           <!-- <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button> -->
           <el-button type="text" size="small">编辑</el-button>
@@ -34,6 +35,7 @@
       </el-table-column>
     </el-table>
   </div>
+  </el-card>
 </template>
       <script>
 export default {

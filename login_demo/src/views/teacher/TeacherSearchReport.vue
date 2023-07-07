@@ -1,4 +1,5 @@
 <template>
+  <el-card class="box-card" style="height: 80vh">
   <div class="container-SearchTeacher" style="text-align: left">
     <el-breadcrumb separator-class="el-icon-arrow-right" class="el-icon">
       <el-breadcrumb-item :to="{ path: '/Admin' }">首页</el-breadcrumb-item>
@@ -22,7 +23,7 @@
     </el-form>
     <div
       style="
-        height: 500px;
+        height: 40vh;
         width: 1000px;
         background-color: #5de051;
         border-radius: 15px;
@@ -46,6 +47,7 @@
       </el-form-item>
     </el-form>
   </div>
+  </el-card>
 </template>
     <script>
 export default {
@@ -59,7 +61,7 @@ export default {
 </script>
     <style>
 .container-SearchTeacher {
-  height: 100%;
+  /*height: 100%;*/
   background-color: #fff;
 }
 .el-icon {

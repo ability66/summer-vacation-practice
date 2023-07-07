@@ -1,4 +1,5 @@
 <template>
+  <el-card class="box-card" style="height: 80vh">
   <div class="container-TeacherSearchStudent">
     <el-breadcrumb separator-class="el-icon-arrow-right" class="el-icon">
       <el-breadcrumb-item :to="{ path: '/Admin' }">首页</el-breadcrumb-item>
@@ -20,7 +21,7 @@
         <el-button type="primary">查询</el-button>
       </el-form-item>
     </el-form>
-
+    <div class="info">
     <el-form
       ref="form"
       :model="form"
@@ -90,7 +91,9 @@
         ></el-date-picker>
       </el-form-item>
     </el-form>
+</div>
   </div>
+  </el-card>
 </template>
   <script>
 export default {
@@ -118,5 +121,10 @@ export default {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 15px;
+}
+.info{
+  margin-top: 13vh;
+  display: flex;
+  align-items: center;
 }
 </style>
