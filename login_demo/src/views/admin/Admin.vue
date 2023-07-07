@@ -52,34 +52,44 @@
                 <template slot="title">教师信息</template>
                 <el-menu-item index="1-1">
                   <router-link tag="span" id="text" to="/admin/searchTeacher"
-                    >查询</router-link
+                    >个人信息</router-link
                   >
                 </el-menu-item>
                 <el-menu-item index="1-2">
-                  <router-link tag="span" id="text" to="/admin/setTeacher"
-                    >设置</router-link
+                  <router-link tag="span" id="text" to="/admin/TeacherSearchStudent"
+                    >学生查询</router-link
+                  >
+                </el-menu-item>
+                <el-menu-item index="1-3">
+                  <router-link tag="span" id="text" to="/admin/TeacherSearchReport"
+                    >查询报告</router-link
+                  >
+                </el-menu-item>
+                <el-menu-item index="1-4">
+                  <router-link tag="span" id="text" to="/admin/TeacherSetScore"
+                    >成绩设置</router-link
                   >
                 </el-menu-item>
               </el-menu-item-group>
               <el-menu-item-group title="学生信息">
-                <el-menu-item index="1-3">
+                <el-menu-item index="2-1">
                   <router-link tag="span" id="text" to="/admin/searchStudent"
                     >查询</router-link
                   >
                 </el-menu-item>
-                <el-menu-item index="1-4">
+                <el-menu-item index="2-2">
                   <router-link tag="span" id="text" to="/admin/setStudent"
                     >设置</router-link
                   >
                 </el-menu-item>
               </el-menu-item-group>
               <el-menu-item-group title="课表信息">
-                <el-menu-item index="1-5">
+                <el-menu-item index="3-1">
                   <router-link tag="span" id="text" to="/admin/searchSchedule"
                     >查询</router-link
                   >
                 </el-menu-item>
-                <el-menu-item index="1-6">
+                <el-menu-item index="3-2">
                   <router-link tag="span" id="text" to="/admin/setSchedule"
                     >设置</router-link
                   >
