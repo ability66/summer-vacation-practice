@@ -1,5 +1,6 @@
 package com.example.summer.mapper;
 
+import com.example.summer.entity.Class;
 import org.springframework.stereotype.Repository;
 
 @Repository

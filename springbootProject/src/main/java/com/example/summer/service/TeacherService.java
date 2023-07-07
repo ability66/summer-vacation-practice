@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TeacherService {
     @Autowired
-    TeacherMapper teacherMapper;
-
-    public Teacher getMessage(int tea_no) {
+    private TeacherMapper teacherMapper;
+    public Teacher selectByTea_no(int tea_no){
         return teacherMapper.selectByTea_no(tea_no);
+    }
+    public void insertTeachers(Teacher teacher){
+        teacherMapper.insertTeachers(teacher);
     }
 }

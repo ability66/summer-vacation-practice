@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface ReportMapper {
     void insertReport(int stu_no, int tea_no, String re_location, Date datetime);
-    List<Report> selectByStu_nos(@Param("stu_nos")int[] stu_nos);
+    List<Report> selectByStu_nos(int[] stu_nos);
 }

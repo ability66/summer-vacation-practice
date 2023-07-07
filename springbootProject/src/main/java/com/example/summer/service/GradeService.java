@@ -12,14 +12,13 @@ import java.util.List;
 public class GradeService {
     @Autowired
     private GradeMapper gradeMapper;
-
-    public List<Grade> getGradeByStu_no(int stu_no) {
+    public List<Subject> selectByStu_no(int stu_no){
         return gradeMapper.selectByStu_no(stu_no);
     }
-
-    public void setGradeByPK(Grade grade) {
-        Grade[] grades=new Grade[1];
-        grades[0]=grade;
+    public List<Subject> selectByStu_noClass_no(int stu_no,int class_no){
+        return gradeMapper.selectByStu_noClass_no(stu_no,class_no);
+    }
+    public void insertGrades(Grade[] grades){
         gradeMapper.insertGrades(grades);
     }
 }
