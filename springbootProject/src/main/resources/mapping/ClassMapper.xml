@@ -15,4 +15,7 @@
         from classtostudent
         where stu_no = #{stu_no}
     </select>
+    <select id="selectAll" resultType="class">
+        select * from class
+    </select>
 </mapper>

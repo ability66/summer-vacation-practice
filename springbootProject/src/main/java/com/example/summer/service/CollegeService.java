@@ -20,5 +20,7 @@ public class CollegeService {
     public void  deleteCollegeByCo_name(String co_name){
         collegeMapper.deleteCollegeByCo_name(co_name);
     }
-
+public void updateCollegeNameByCollege(String oldName,String newName){
+        collegeMapper.updateCollegeNameByCo_name(oldName,newName);
+}
 }

@@ -8,6 +8,15 @@
     namespace:名称空间
 -->
 <mapper namespace="com.example.summer.mapper.TeacherMapper">
+<!--    修改老师信息-->
+    <update id="updateTeacher">
+        update teacher set tea_name=#{newTea.tea_name} where tea_no=#{oldTea.tea_no};
+        update teacher set tea_col_no=#{newTea.tea_col_no} where tea_no=#{oldTea.tea_no};
+        update teacher set tea_level=#{newTea.tea_level} where tea_no=#{oldTea.tea_no}
+    </update>
+    <select id="selectAll" resultType="teacher">
+        select * from teacher
+    </select>
     <!--插入教师信息-->
     <insert id="insertTeachers">
         insert into teacher values

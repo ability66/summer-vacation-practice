@@ -9,4 +9,5 @@ public interface CollegeMapper {
     int selectCo_noByCo_name(String co_name);
     void insertCollege(College college);
     void deleteCollegeByCo_name(String name);
+    void updateCollegeNameByCo_name(String oldName,String newName);
 }

@@ -15,7 +15,10 @@
     </insert>
 <!--    通过班级号修改课表-->
     <update id="updateClassTableByClass_no">
-        update classtable set class_order=#{class_order} and class_weekday=#{class_weekday} and sub_no=#{sub_no} and tea_no=#{tea_no} where class_no=#{class_no};
+        update classtable set class_order=#{classTable.class_order} where class_no=#{cls_no};
+        update classtable set class_weekday=#{classTable.class_weekday} where class_no=#{cls_no};
+        update classtable set sub_no=#{classTable.sub_no} where class_no=#{cls_no};
+        update classtable set tea_no=#{classTable.tea_no} where class_no=#{cls_no};
 
     </update>
     <!--根据班级号选择课表-->
@@ -29,5 +32,8 @@
         select class_no
         from classtable
         where sub_no = #{sub_no}
+    </select>
+    <select id="selectAll" resultType="classtable">
+        select * from classtable
     </select>
 </mapper>

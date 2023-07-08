@@ -13,7 +13,13 @@
         insert into subject
         values (#{sub_no}, #{tea_no}, #{sub_name})
     </insert>
-<!--    通过课程号删除课程-->
+<!--    修改课程-->
+    <update id="updateSubject">
+        update subject set tea_no=#{newSub.tea_no} where sub_no=#{oldSub.sub_no};
+        update subject set sub_name=#{newSub.sub_name} where sub_no=#{oldSub.sub_no};
+
+    </update>
+    <!--    通过课程号删除课程-->
     <delete id="deleteSubjectBySub_nameAndTea_no">
         delete from classtable where sub_no=(select sub_no from subject where subject.tea_no=#{tea_no} and subject.sub_name=#{sub_name});
         delete from grade where sub_no=(select sub_no from subject where subject.tea_no=#{tea_no} and subject.sub_name=#{sub_name});
@@ -26,5 +32,8 @@
         select sub_no
         from subject
         where tea_no = #{tea_no}
+    </select>
+    <select id="selectAll" resultType="subject">
+        select * from subject
     </select>
 </mapper>

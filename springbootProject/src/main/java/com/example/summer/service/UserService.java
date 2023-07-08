@@ -2,6 +2,7 @@ package com.example.summer.service;
 
 import com.example.summer.entity.User;
 import com.example.summer.mapper.UserMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,5 +24,8 @@ public class UserService {
 
     public void insertUser(User user) {
         userMapper.insertUser(user);
+    }
+    public void updatePassword(@Param("password") String password, @Param("user") User user){
+        userMapper.updatePassword(password,user);
     }
 }

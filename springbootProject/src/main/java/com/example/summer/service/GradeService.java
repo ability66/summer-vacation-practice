@@ -27,4 +27,7 @@ public class GradeService {
     public void insertGrade(Grade grade) {
         gradeMapper.insertGrade(grade);
     }
+    public void updateGradeByStudent(Grade gd,int grade){
+        gradeMapper.updateGradeByStudent(gd,grade);
+    }
 }

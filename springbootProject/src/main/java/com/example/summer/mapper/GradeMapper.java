@@ -1,6 +1,8 @@
 package com.example.summer.mapper;
 
 import com.example.summer.entity.Grade;
+import com.example.summer.entity.Student;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,4 +16,5 @@ public interface GradeMapper {
     void insertGrades(Grade[] grades);
 
     void insertGrade(Grade grade);
+    void updateGradeByStudent(@Param("gd") Grade gd, int grade);
 }

@@ -21,4 +21,7 @@ public class TerminologyService {
     public void deletTerminologyByTer_no(int ter_no){
         terminologyMapper.deletTerminologyByTer_no(ter_no);
     }
+    public  void updateTerminologyByTer_name(String oldName,String newName){
+        terminologyMapper.updateTerminologyByTer_name(oldName,newName);
+    }
 }

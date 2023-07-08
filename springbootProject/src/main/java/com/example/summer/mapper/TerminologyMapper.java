@@ -10,4 +10,5 @@ public interface TerminologyMapper {
     void insertTerminology(Terminology terminology);
     void deletTerminologyByTer_name(String ter_name);
     void deletTerminologyByTer_no(int ter_no);
+    void updateTerminologyByTer_name(String oldName,String newName);
 }

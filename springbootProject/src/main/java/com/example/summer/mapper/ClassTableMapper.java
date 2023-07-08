@@ -2,6 +2,7 @@ package com.example.summer.mapper;
 
 
 import com.example.summer.entity.ClassTable;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface ClassTableMapper {
     List<Integer> selectClass_noBySub_no(int sub_no);
 
     void insertClassTable(ClassTable classTable);
-    void updateClassTableByClass_no(int cls_no,ClassTable classTable);
+    void updateClassTableByClass_no(@Param("cls_no") int cls_no, @Param("classTable") ClassTable classTable);
 }

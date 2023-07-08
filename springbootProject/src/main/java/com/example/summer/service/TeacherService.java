@@ -2,6 +2,7 @@ package com.example.summer.service;
 
 import com.example.summer.entity.Teacher;
 import com.example.summer.mapper.TeacherMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,4 +25,8 @@ public class TeacherService {
     public void deleteTeacherByTea_no(int tea_no){
         teacherMapper.deleteTeacherByTea_no(tea_no);
     }
+    public  void updateTeacher( Teacher oldTea,  Teacher newTea){
+        teacherMapper.updateTeacher(oldTea,newTea);
+    }
+
 }

@@ -2,6 +2,7 @@ package com.example.summer.service;
 
 import com.example.summer.entity.Subject;
 import com.example.summer.mapper.SubjectMapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,5 +22,8 @@ public class SubjectService {
     }
     public  void deleteSubjectBySub_nameAndTea_no(int tea_no,String sub_name){
         subjectMapper.deleteSubjectBySub_nameAndTea_no(tea_no,sub_name);
+    }
+    public void updateSubject(Subject oldSub, Subject newSub){
+        subjectMapper.updateSubject(oldSub,newSub);
     }
 }

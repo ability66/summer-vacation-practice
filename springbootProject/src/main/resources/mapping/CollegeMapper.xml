@@ -8,7 +8,11 @@
     namespace:名称空间
 -->
 <mapper namespace="com.example.summer.mapper.CollegeMapper">
-        <select id="selectAll" resultType="college">
+<!--    修改学院名称-->
+    <update id="updateCollegeNameByCo_name">
+        update college set co_name=#{newName} where co_name=#{oldName}
+    </update>
+    <select id="selectAll" resultType="college">
             select * from college
         </select>
     <!--    根据学院号查学院名-->
