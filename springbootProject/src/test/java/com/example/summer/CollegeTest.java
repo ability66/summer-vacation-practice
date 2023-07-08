@@ -31,6 +31,7 @@ public class CollegeTest {
         c1.setTea_no(1);
         c1.setSub_no(1);
         c1.setClass_weekday("周三");
+        c1.setClass_order(1);
 
     }
 

@@ -1,0 +1,19 @@
+server:
+  port: 8181
+
+spring:
+  datasource:
+    username: root
+    password: 200212
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test1?usaSSL=false&allowMultiQueries=true
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.summer.entity
+
+logging:
+  level:
+    com:
+      example:
+        mapper: debug

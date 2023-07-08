@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.example.summer.mapper.TerminologyMapper">
+    <!--    <select id="selectAll" resultType="terminology">-->
+    <!--        select * from terminology-->
+    <!--    </select>-->
+    <!--    通过专业名查专业号-->
+    <select id="selectTer_noByTer_name" resultType="integer">
+        select ter_no from terminology where ter_name=#{ter_name}
+    </select>
+    <!--    通过专业号查专业名字-->
+    <select id="selectTer_nameByTer_no" resultType="string">
+        select ter_name from terminology where ter_no=#{ter_no}
+    </select>
+<!--    添加专业-->
+    <insert id="insertTerminology">
+        insert into terminology values (#{ter_no},#{ter_name})
+    </insert>
+<!--    删除专业通过专业名-->
+    <delete id="deletTerminologyByTer_name">
+        delete
+        from terminology
+        where ter_name=#{ter_name}
+    </delete>
+    <!--    通过专业号删除专业-->
+    <delete id="deletTerminologyByTer_no">
+        delete from terminology where ter_no=#{ter_no};
+        update student set ter_no=null where ter_no=#{ter_no};
+        update class set ter_no=null where ter_no=#{ter_no}
+    </delete>
+
+
+</mapper>

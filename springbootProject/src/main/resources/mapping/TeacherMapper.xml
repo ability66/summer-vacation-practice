@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.example.summer.mapper.TeacherMapper">
+    <!--插入教师信息-->
+    <insert id="insertTeachers">
+        insert into teacher values
+        <foreach collection="array" item="teacher" separator=",">
+            (#{tea_no},#{tea_col_no},#{tea_name},#{tea_level})
+        </foreach>
+    </insert>
+    <insert id="insertTeacher">
+        insert into teacher
+        values (#{tea_no}, #{tea_col_no}, #{tea_name}, #{tea_level})
+    </insert>
+<!--    通过教师工号删除老师-->
+    <delete id="deleteTeacherByTea_no">
+        delete from teacher where tea_no=#{tea_no};
+        delete from classtable where tea_no=#{tea_no};
+        delete from report where tea_no=#{tea_no};
+        delete from subject where tea_no=#{tea_no};
+        delete from user where tea_no=#{tea_no};
+
+    </delete>
+    <!--根据教师号查信息-->
+    <select id="selectByTea_no" resultType="teacher">
+        select *
+        from teacher
+        where tea_no = #{tea_no}
+    </select>
+</mapper>
