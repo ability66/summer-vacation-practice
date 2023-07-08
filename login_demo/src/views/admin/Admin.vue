@@ -48,15 +48,13 @@
       </el-aside>
       <el-container>
         <el-header style="text-align: right; font-size: 12px">
-          <el-dropdown>
+          <el-dropdown @command="handleLogout">
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>查看</el-dropdown-item>
-              <el-dropdown-item>新增</el-dropdown-item>
-              <el-dropdown-item>删除</el-dropdown-item>
+              <el-dropdown-item command="logout">登出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>王小虎</span>
+          <span>admin</span>
         </el-header>
 
         <el-main>
@@ -69,6 +67,7 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie';
 export default {
   name: "tes",
   data() {
@@ -87,6 +86,15 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleLogout(command) {
+      if (command === 'logout') {
+        // 删除cookie
+        Cookies.remove('userId');
+        localStorage.removeItem('power');
+        // 跳转到登录页面
+        this.$router.push('/');
+      }
     }
   }
 }

@@ -6,25 +6,19 @@
       <el-form ref="form" :model="form" label-width="200px">
         <div style="font-size: 20px">
           <el-form-item label="姓名">
-            <el-input v-model="form.name" style="width: 70%;" disabled></el-input>
+            <el-input v-model="form.stu_name" style="width: 70%;" disabled></el-input>
           </el-form-item>
           <el-form-item label="学号">
-            <el-input v-model="form.no" style="width: 70%;" disabled></el-input>
+            <el-input v-model="form.stu_no" style="width: 70%;" disabled></el-input>
           </el-form-item>
           <el-form-item label="班级">
             <el-input v-model="form.stu_class" style="width: 70%;" disabled></el-input>
-          </el-form-item>
-          <el-form-item label="学院">
-            <el-input v-model="form.college" style="width: 70%;" disabled></el-input>
           </el-form-item>
           <el-form-item label="专业">
             <el-input v-model="form.major" style="width: 70%;" disabled></el-input>
           </el-form-item>
           <el-form-item label="入学时间">
-            <el-col :span="24">
-              <el-date-picker type="date" placeholder="选择日期" v-model="form.date"
-                              style="width: 70%;" disabled></el-date-picker>
-            </el-col>
+            <el-input v-model="form.stu_year" style="width: 70%;" disabled></el-input>
           </el-form-item>
         </div>
       </el-form>
@@ -35,26 +29,51 @@
 </template>
 
 <script>
+import axios from 'axios';
+import Cookies from 'js-cookie';
+
 export default {
-  name: "student_info_change",
   data() {
     return {
       form: {
-        name: '张三',
-        no: '123',
-        date: '2023-05-03',
-        stu_class: '2525',
-        college: '计算机',
-        major: '软件工程',
+        stu_name: '',
+        stu_no: '',
+        stu_class: '',
+        ter_no: '',//专业号
+        stu_year: '',
+        major: ''//专业名
       }
+    };
+  },
+  methods: {
+    getStudentInfo() {
+      const stu_no = Cookies.get('userId'); // 要请求的学生学号
+      console.log("学生信息");
+      axios.post('http://localhost:8181/student/getMessage', stu_no,{
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8'
+        }
+      })
+        .then(response => {
+          console.log("response_data");
+          this.form.stu_name = response.data.stu_name;
+          this.form.stu_no = response.data.stu_no;
+          this.form.stu_year = response.data.stu_year;
+          console.log(this.form.stu_year);
+          this.form.sut_ter_no = response.data.ter_no;
+        })
+        .catch(error => {
+          console.error(error);
+        });
     }
   },
-  methods: {}
-}
+  mounted() {
+    this.getStudentInfo();
+  },
+};
 </script>
 
 <style scoped>
-
 /*.output{
   line-height: 40px;
   align-items: center;

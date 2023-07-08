@@ -2,7 +2,7 @@
   <el-card class="box-card" style="height: 80vh">
     <el-upload
         class="upload-demo"
-        action="https://jsonplaceholder.typicode.com/posts/"
+        action="#"
         :on-preview="handlePreview"
         :on-remove="handleRemove"
         :before-remove="beforeRemove"

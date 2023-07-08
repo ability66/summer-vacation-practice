@@ -7,7 +7,6 @@
         </div>
         <el-col :span="12">
           <el-menu
-              default-active="1"
               default-openeds="[1]"
               class="el-menu-vertical-demo"
               @open="handleOpen"
@@ -35,15 +34,13 @@
       </el-aside>
       <el-container>
         <el-header style="text-align: right; font-size: 12px">
-          <el-dropdown>
+          <el-dropdown @command="handleLogout">
             <i class="el-icon-setting" style="margin-right: 15px"></i>
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item>查看</el-dropdown-item>
-              <el-dropdown-item>新增</el-dropdown-item>
-              <el-dropdown-item>删除</el-dropdown-item>
+              <el-dropdown-item command="logout">登出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>王小虎</span>
+          <span>{{ userId }}</span>
         </el-header>
         <el-main>
           <router-view/>
@@ -54,14 +51,33 @@
 </template>
 
 <script>
+import Cookies from 'js-cookie';
 export default {
   name: "tes",
+  data() {
+    return {
+      userId: ''
+    };
+  },
+  created() {
+    this.userId = Cookies.get('userId');
+  }
+  ,
   methods: {
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    handleLogout(command) {
+      if (command === 'logout') {
+        // 删除cookie
+        Cookies.remove('userId');
+        localStorage.removeItem('power');
+        // 跳转到登录页面
+        this.$router.push('/');
+      }
     }
   }
 }

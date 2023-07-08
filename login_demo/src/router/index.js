@@ -12,24 +12,12 @@ const routes = [
     name: 'login',
     component: Login,
   },
-  // 测试Index路由
-  {
-    path:'/Index',
-    name:'index',
-    component:Index,
-    children:[
-      {
-        path:'Index1',
-        name:'index1',
-        component:()=>import('../views/general/Index1.vue')
-      }
-    ]
-  },
   // Admin路由
   {
     //母路由就是""首页",每个角色的首页因为侧边栏不同，所以单独写
     path:'/Admin',
     name:'admin',
+    meta:{requireAuth:true},
     component:()=>import('../views/admin/Admin.vue'),
     children:[
       //Teacher
@@ -69,8 +57,9 @@ const routes = [
   },
   // Teacher路由
   {
-    path:'/Index',
-    name:'index',
+    path:'/Teacher',
+    name:'teacher',
+    meta:{requireAuth:true},
     component:()=>import('../views/teacher/Teacher.vue'),
     children:[
       {
@@ -84,6 +73,7 @@ const routes = [
   {
     path:'/Student',
     name:'Student',
+    meta:{requireAuth:true},
     component: ()=>import('../views/student/Student.vue'),
     children:[
       {
@@ -110,6 +100,8 @@ const routes = [
   }
 
 ]
+
+
 
 const router = new VueRouter({
   mode: 'history',

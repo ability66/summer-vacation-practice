@@ -17,31 +17,68 @@
 
 <script>
 export default {
-  name: "student_course",
   data() {
     return {
-      tableData: [
-        {
-          time: '8:00-9:00',
-          monday: '语文',
-          tuesday: '数学',
-          wednesday: '英语',
-          thursday: '物理',
-          friday: '化学'
-        },
-        {
-          time: '9:00-10:00',
-          monday: '数学',
-          tuesday: '英语',
-          wednesday: '物理',
-          thursday: '化学',
-          friday: '生物'
-        },
-        // 更多课程数据...
+      tableData:[
+        // {
+        //   time: '8:00-9:00',
+        //   monday: '1',
+        //   tuesday: '2',
+        //   wednesday: '3',
+        //   thursday: '4',
+        //   friday: '5'
+        // },
+        // {
+        //   time: '9:00-10:00',
+        //   monday: '1',
+        //   tuesday: '2',
+        //   wednesday: '3',
+        //   thursday: '4',
+        //   friday: '5'
+        // }
       ]
+       // 用于存储学生成绩的数组
+    };
+  },
+  mounted() {
+    this.getGrades(); // 在页面加载完成后自动调用获取成绩的方法
+  },
+  methods: {
+    getGrades() {
+      console.log("学生课表")
+      const stu_no = Cookies.get('userId');; // 要请求的学生学号
+          // 映射表，将中文的星期几转换为英文属性名
+    const weekdayMap = {
+      "周一": "monday",
+      "周二": "tuesday",
+      "周三": "wednesday",
+      "周四": "thursday",
+      "周五": "friday"
+    };
+      // 发送请求获取学生成绩
+      axios.post('http://localhost:8181/student/getClassTable', stu_no,{
+        headers: {
+          'Content-Type': 'application/json;charset=UTF-8'
+        }
+      })
+        .then(response => {
+          console.log(response.data);
+          this.tableData = response.data.map(
+            item=>(
+              {
+                time: `第${item.class_order}节`,
+          [weekdayMap[item.class_weekday]]: item.sub_no // 使用映射表设置属性名
+              }
+            )
+          );
+        })
+        .catch(error => {
+          console.error(error);
+        });
+        console.log(this.grades);
     }
   }
-}
+};
 </script>
 
 <style scoped>
