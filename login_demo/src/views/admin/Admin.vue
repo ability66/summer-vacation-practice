@@ -1,7 +1,7 @@
 <template>
-  <div style="border: 1px solid #000000;">
+  <div>
     <el-container style="height: 95vh; border: 1px solid #eee;">
-      <el-aside width="220px" style="background-color: rgb(0, 90, 247)">
+      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
         <div id="logo">
           LOGO
         </div>
@@ -129,10 +129,10 @@ export default {
 </script>
 
 <style scoped>
-.el-aside {
+/*.el-aside {
   height: 100%;
   border-right: 1px solid #eee;
-}
+}*/
 
 .el-header {
   background-color: #B3C0D1;
