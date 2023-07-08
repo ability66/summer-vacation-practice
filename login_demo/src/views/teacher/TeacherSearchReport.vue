@@ -2,7 +2,7 @@
   <el-card class="box-card" style="height: 80vh">
   <div class="container-SearchTeacher" style="text-align: left">
     <el-breadcrumb separator-class="el-icon-arrow-right" class="el-icon">
-      <el-breadcrumb-item :to="{ path: '/Admin' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>首页</el-breadcrumb-item>
       <el-breadcrumb-item>教师查询</el-breadcrumb-item>
       <el-breadcrumb-item>查询报告</el-breadcrumb-item>
     </el-breadcrumb>
