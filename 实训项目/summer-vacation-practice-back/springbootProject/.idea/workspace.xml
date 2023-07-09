@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="修复部分问题">
+      <change beforePath="$PROJECT_DIR$/../../.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../springbootProject/src/test/java/com/example/summer/CollegeTest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/../.." value="last1" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2SCCqdueboUTSHmwQnypeTJ4kZP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Git.Branch.Popup.ShowAllRemotes": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lhk/OneDrive/桌面/2023实训/summer-vacation-practice-dev2/springbootProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.43563217",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "acb38050a66c2700774f872b21e3d5e2",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\resources" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java\com\example\summer" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\resources\mapping" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\springbootProject\springbootProject\src\main\java\com\example\springbootproject" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\summer-vacation-practice-dev2\springbootProject\src\main\resources\mapping" />
+      <recent name="C:\Users\lhk\OneDrive\桌面\2023实训\summer-vacation-practice-dev2\springbootProject\src\main\java\com\example\summer\mapper" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.summer.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SpringbootProjectApplication">
+    <configuration name="ReportService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.summer.service.ReportService" />
+      <module name="springbootProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.summer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="user.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="7038757d-d6c9-40ea-a46f-a0859845c007/schema/2023summer/table/user.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="SpringbootProjectApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="springbootProject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.summer.SpringbootProjectApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="数据库脚本.user.sql" />
+        <item itemvalue="应用程序.ReportService" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="3235f433-aa3e-49e5-9432-e81efa7b7a22" name="更改" comment="" />
+      <created>1688641370178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688641370178</updated>
+      <workItem from="1688641376454" duration="10973000" />
+      <workItem from="1688692152063" duration="6914000" />
+      <workItem from="1688800901242" duration="6156000" />
+    </task>
+    <task id="LOCAL-00001" summary="优化好配置准备controller和service">
+      <created>1688647697980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688647697980</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加了登录的controller和service">
+      <created>1688654865519</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688654865519</updated>
+    </task>
+    <task id="LOCAL-00003" summary="添加了登录的controller和service">
+      <created>1688655113512</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688655113512</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完成部分service层书写">
+      <created>1688712352668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688712352668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="后端只差报告的查重部分，待检验正确性">
+      <created>1688714422421</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688714422421</updated>
+    </task>
+    <task id="LOCAL-00006" summary="修复部分问题">
+      <created>1688807138452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688807138452</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="last2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="优化好配置准备controller和service" />
+    <MESSAGE value="添加了登录的controller和service" />
+    <MESSAGE value="完成部分service层书写" />
+    <MESSAGE value="后端只差报告的查重部分，待检验正确性" />
+    <MESSAGE value="修复部分问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复部分问题" />
+    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+  </component>
+</project>
