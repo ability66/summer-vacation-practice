@@ -6,26 +6,21 @@
         <div id="login">
             <el-card class="box-card">
                 <el-form ref="loginForm" :model="loginData">
-                    <el-form-item label="用户名" prop="username" style="width: 400px;">
+                    <el-form-item label="用户名" prop="username">
                         <el-input v-model="loginData.username" placeholder="Username"></el-input>
                     </el-form-item>
-                    <el-form-item label="密码" prop="password" style="width: 400px;">
+                    <el-form-item label="密码" prop="password">
                         <el-input placeholder="Password" v-model="loginData.password" type="password"
                             show-password></el-input>
                     </el-form-item>
-<!--                    <el-form-item label="验证码" prop="code">
+                    <el-form-item label="验证码" prop="code">
                         <el-input v-model="code" placeholder="验证码"></el-input>
-                    </el-form-item>-->
+                    </el-form-item>
                     <!-- Add the vue-recaptcha component here -->
-
-<!--                    <vue-recaptcha sitekey="<your-site-key>" @verify="onCaptchaVerified"
-                      
-    @expired="onCaptchaExpired"></vue-recaptcha>-->
-    <div style="margin-top: 50px;">
-                  <verify type="3" @success="onVerifySuccess" @error="onVerifyError" vOffset="10px" :showButton="false" ></verify></div>
-                    <div style="display: flex; justify-content: center; margin-top: 30px;">
-                        <el-button   type="primary" @click="login">LOGIN</el-button>
-                    </div>
+                    <vue-recaptcha sitekey="<your-site-key>" @verify="onCaptchaVerified"
+                        @expired="onCaptchaExpired"></vue-recaptcha>
+                    <el-button type="primary" @click="login">LOGIN</el-button>
+                    <el-button type="primary" @click="jumptoindex">Jump</el-button>
                 </el-form>
             </el-card>
         </div>
@@ -91,7 +86,7 @@
 }
 
 .el-card {
-    width: 500px;
+    width: 373px;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
@@ -135,14 +130,12 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import VueRecaptcha from 'vue-recaptcha';
-import Verify from 'vue2-verify'
 
 const backendURL = 'http://localhost:8181';
 
 export default {
     components: {
         VueRecaptcha,
-        Verify,
     },
     data() {
         return {
@@ -153,8 +146,7 @@ export default {
             code: '',
             time: '',
             captchaResponse: null,
-            date: '',
-            verifycode:false
+            date: ''
         }
     },
     methods: {
@@ -198,75 +190,46 @@ export default {
             //     // captcha not verified, show an error message
             //     return;
             // }
-          console.log(this.verifycode);
-          if(this.verifycode) {
             console.log(this.loginData.username)
             const user = {
-              username: this.loginData.username,
-              password: this.loginData.password
+                username: this.loginData.username,
+                password: this.loginData.password
             };
 
             axios.post('http://localhost:8181/user/loginIn', user)
                 .then(response => {
-                  const role = response.data;
-                  if (role === 'admin') {
-                    // 登录成功，跳转到管理员页面
-                    Cookies.set('userId', this.loginData.username);
-                    // 将role存储到localStorage中
-                    localStorage.setItem('power', role);
-                    this.$router.push('/admin');
-                  } else if (role === 'student') {
-                    // 登录成功，跳转到学生页面
-                    Cookies.set('userId', this.loginData.username);
-                    // 将role存储到localStorage中
-                    localStorage.setItem('power', role);
-                    this.$router.push('/student');
-                  } else if (role === 'teacher') {
-                    // 登录成功，跳转到教师页面
-                    Cookies.set('userId', this.loginData.username);
-                    // 将role存储到localStorage中
-                    localStorage.setItem('power', role);
-                    this.$router.push('/teacher');
-                  } else {
-                    // 登录失败，显示错误信息
-                    alert('登录失败，请检查用户名和密码！');
-                  }
+                    const role = response.data;
+                    if (role === 'admin') {
+                        // 登录成功，跳转到管理员页面
+                        Cookies.set('userId', this.loginData.username);
+                        // 将role存储到localStorage中
+                        localStorage.setItem('power', role);
+                        this.$router.push('/admin');
+                    } else if (role === 'student') {
+                        // 登录成功，跳转到学生页面
+                        Cookies.set('userId', this.loginData.username);
+                        // 将role存储到localStorage中
+                        localStorage.setItem('power', role);
+                        this.$router.push('/student');
+                    } else if (role === 'teacher') {
+                        // 登录成功，跳转到教师页面
+                        Cookies.set('userId', this.loginData.username);
+                        // 将role存储到localStorage中
+                        localStorage.setItem('power', role);
+                        this.$router.push('/teacher');
+                    } else {
+                        // 登录失败，显示错误信息
+                        alert('登录失败，请检查用户名和密码！');
+                    }
                 })
                 .catch(error => {
-                  console.error(error);
-                  alert('登录失败，请稍后重试！');
+                    console.error(error);
+                    alert('登录失败，请稍后重试！');
                 });
-          }
-          else{
-            window.alert("登录失败")
-          }
-        },
-      open() {
-        this.$alert('请完成验证', '提醒', {
-          confirmButtonText: '确定',
-          // callback: action => {
-          //   this.$message({
-          //     type: 'info',
-          //     message: `action: ${ action }`
-          //   });
-          // }
-        });
-      },
-      onVerifySuccess(obj) {
-        //验证码正确回调
-        console.log('verify success');
-        this.verifycode=true;
-        //todo
-      },
-      onVerifyError(obj) {
-        //验证码错误回调
-        console.log('verify error');
-        //错误刷新验证码
-        obj.refresh();
-        //todo
+        }
     },
     mounted() {
         setInterval(this.update_clock, 1000);
-    }}
+    }
 }
 </script>

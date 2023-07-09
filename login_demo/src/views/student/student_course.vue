@@ -1,7 +1,7 @@
 <template>
   <!--  <div id="stu_course" class="container">
       <div class="output">-->
-  <el-card class="box-card" style="height: 80vh">
+  <el-card class="box-card" style="height: 79vh">
     <el-table :data="tableData" style="width: 100%;font-size: 20px;">
       <el-table-column prop="time" label=""></el-table-column>
       <el-table-column prop="monday" label="星期一"></el-table-column>
@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import Cookies from 'js-cookie';
 export default {
   data() {
     return {

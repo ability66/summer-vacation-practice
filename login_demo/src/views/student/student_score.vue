@@ -1,5 +1,5 @@
 <template>
-  <el-card class="box-card" style="height: 80vh">
+  <el-card class="box-card" style="height: 79vh">
     <el-table
         :data="grades"
         height="522"
@@ -11,12 +11,7 @@
           label="课程号"
           width="300">
       </el-table-column>
-      <el-table-column
-          align="center"
-          prop="course_name"
-          label="课程名"
-          width="300">
-      </el-table-column>
+
       <el-table-column
           align="center"
           prop="score"
@@ -27,6 +22,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import Cookies from 'js-cookie';
 export default {
   data() {
     return {
@@ -55,6 +52,7 @@ export default {
     getGrades() {
       console.log("学生成绩")
       const stu_no = Cookies.get('userId');; // 要请求的学生学号
+  
       // 发送请求获取学生成绩
       axios.post('http://localhost:8181/student/getGrade', stu_no,{
         headers: {
@@ -67,7 +65,6 @@ export default {
             item=>(
               {
                 course_no: item.sub_no,
-                course_name: "未知",
                 score: item.grade
               }
             )

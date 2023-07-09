@@ -36,11 +36,11 @@
             <span>{{ scope.row.stu_year }}</span>
           </template>
         </el-table-column>
-        <!-- <el-table-column label="操作">
-          <template slot-scope="scope">
-            <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
-          </template>
-        </el-table-column> -->
+        <!--        <el-table-column label="操作">-->
+        <!--          <template slot-scope="scope">-->
+        <!--            <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>-->
+        <!--          </template>-->
+        <!--        </el-table-column>-->
       </el-table>
 
     </div>
@@ -85,60 +85,42 @@ export default {
     };
   },
   methods: {
-    handleDelete(index, row){
-      const stu_no = row.stu_no;
-      // 发送POST请求到服务器端API查询学生信息
-      console.log(stu_no);
-      axios
-        .post('http://localhost:8181/admin/deleteStudent', stu_no,{
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-          }
-        })
-        .then((response) => {
-          console.log("1111");
-        })
-        .catch((error) => {
-          // 处理错误
-          console.error(error);
-        });
-    },
     getStudents() {
+      console.log("getStudents")
       // 发送GET请求到服务器端API获取所有学生信息
       axios
-        .post('http://localhost:8181/admin/getStudents')
-        .then((response) => {
-          // 处理响应数据
-          this.tableData = response.data;
-
-        })
-        .catch((error) => {
-          // 处理错误
-          console.error(error);
-        });
+          .post('http://localhost:8181/admin/getStudents')
+          .then((response) => {
+            // 处理响应数据
+            this.tableData = response.data;
+          })
+          .catch((error) => {
+            // 处理错误
+            console.error(error);
+          });
     },
 
     selectStudent(stuNo) {
       const stu_no = stuNo;
       // 发送POST请求到服务器端API查询学生信息
       axios
-        .post('http://localhost:8181/admin/selectStudent', stu_no,{
-          headers: {
-            'Content-Type': 'application/json;charset=UTF-8'
-          }
-        })
-        .then((response) => {
-          // 处理响应数据
-          this.tableData = [];
-          this.tableData[0] = response.data;
+          .post('http://localhost:8181/admin/selectStudent', stu_no,{
+            headers: {
+              'Content-Type': 'application/json;charset=UTF-8'
+            }
+          })
+          .then((response) => {
+            // 处理响应数据
+            this.tableData = [];
+            this.tableData[0] = response.data;
 
-          console.log(response.data);
-          console.log(this.tableData);
-        })
-        .catch((error) => {
-          // 处理错误
-          console.error(error);
-        });
+            console.log(response.data);
+            console.log(this.tableData);
+          })
+          .catch((error) => {
+            // 处理错误
+            console.error(error);
+          });
     },
     search() {
       console.log("search");
@@ -158,6 +140,7 @@ export default {
   },
   created() {
     // 组件创建后调用getStudents方法获取所有学生信息
+    console.log("created")
     this.getStudents();
   },
 };

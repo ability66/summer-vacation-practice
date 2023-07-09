@@ -1,6 +1,6 @@
 <template>
   <!--  <div class="container">-->
-  <el-card class="box-card" style="height: 80vh">
+  <el-card class="box-card" style="height: 79vh">
     <div id="stu_info" class="output">
       <div class="empty"></div>
       <el-form ref="form" :model="form" label-width="200px">
@@ -11,11 +11,8 @@
           <el-form-item label="学号">
             <el-input v-model="form.stu_no" style="width: 70%;" disabled></el-input>
           </el-form-item>
-          <el-form-item label="班级">
-            <el-input v-model="form.stu_class" style="width: 70%;" disabled></el-input>
-          </el-form-item>
           <el-form-item label="专业">
-            <el-input v-model="form.major" style="width: 70%;" disabled></el-input>
+            <el-input v-model="form.ter_no" style="width: 70%;" disabled></el-input>
           </el-form-item>
           <el-form-item label="入学时间">
             <el-input v-model="form.stu_year" style="width: 70%;" disabled></el-input>
@@ -38,10 +35,8 @@ export default {
       form: {
         stu_name: '',
         stu_no: '',
-        stu_class: '',
         ter_no: '',//专业号
         stu_year: '',
-        major: ''//专业名
       }
     };
   },
@@ -60,7 +55,7 @@ export default {
           this.form.stu_no = response.data.stu_no;
           this.form.stu_year = response.data.stu_year;
           console.log(this.form.stu_year);
-          this.form.sut_ter_no = response.data.ter_no;
+          this.form.ter_no = response.data.ter_no;
         })
         .catch(error => {
           console.error(error);
