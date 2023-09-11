@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--
+    namespace:名称空间
+-->
+<mapper namespace="com.example.summer.mapper.SubjectMapper">
+    <!--设置课程信息-->
+    <insert id="insertSubject">
+        insert into subjects
+        values (#{sub_no}, #{tea_no}, #{sub_name})
+    </insert>
+<!--    修改课程-->
+    <update id="updateSubject">
+        update classtable set tea_no=#{newSub.tea_no} where sub_no=#{oldSub.sub_no};
+        update subject set tea_no=#{newSub.tea_no} where sub_no=#{oldSub.sub_no};
+        update subject set sub_name=#{newSub.sub_name} where sub_no=#{oldSub.sub_no};
+
+    </update>
+    <!--    通过课程号删除课程-->
+    <delete id="deleteSubjectBySub_nameAndTea_no">
+        delete from classtable where sub_no=(select sub_no from subject where subject.tea_no=#{tea_no} and subject.sub_name=#{sub_name});
+        delete from grade where sub_no=(select sub_no from subject where subject.tea_no=#{tea_no} and subject.sub_name=#{sub_name});
+        delete from subject where tea_no=#{tea_no} and sub_name=#{sub_name};
+
+
+    </delete>
+    <!--根据工号查课程号-->
+    <select id="selectSub_noByTea_no" resultType="Integer">
+        select sub_no
+        from subject
+        where tea_no = #{tea_no}
+    </select>
+    <select id="selectAll" resultType="subject">
+        select * from subject
+    </select>
+    <select id="selectSubjectByPK" resultType="java.lang.Integer">
+        select sub_no from subject where sub_name=#{sub_name} and tea_no=#{tea_no}
+    </select>
+</mapper>
